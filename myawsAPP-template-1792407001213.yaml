@@ -1,0 +1,2201 @@
+---
+Metadata:
+  AWSToolsMetrics:
+    IaC_Generator: "arn:aws:cloudformation:eu-north-1:137687463360:generatedTemplate/a3e44859-253d-444a-92ea-7be4c3521250"
+Parameters:
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsMemoryGiBPerVCpuMax2T7sI:
+    NoEcho: "true"
+    Type: "Number"
+    Description: "The maximum amount of memory per vCPU, in GiB. To specify no maximum\
+      \ limit, omit this parameter."
+  EC2LaunchTemplateLaunchTemplateDataPlacementAffinityhFLqr:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The affinity setting for an instance on a Dedicated Host."
+  EC2LaunchTemplateLaunchTemplateDataKeyNamefI4DX:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The name of the key pair. You can create a key pair using [CreateKeyPair](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateKeyPair.html)\
+      \ or [ImportKeyPair](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ImportKeyPair.html).\n\
+      \  If you do not specify a key pair, you can't connect to the instance unless\
+      \ you choose an AMI that is configured to allow users another way to log in."
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsInstanceGenerationsXeLvE:
+    NoEcho: "true"
+    Type: "CommaDelimitedList"
+    Description: "Indicates whether current or previous generation instance types\
+      \ are included. The current generation instance types are recommended for use.\
+      \ Current generation instance types are typically the latest two to three generations\
+      \ in each instance family. For more information, see [Instance types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html)\
+      \ in the *Amazon EC2 User Guide*.\n For current generation instance types, specify\
+      \ ``current``.\n For previous generation instance types, specify ``previous``.\n\
+      \ Default: Current and previous generation instance types"
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsVCpuCountMin9LUZW:
+    NoEcho: "true"
+    Type: "Number"
+    Description: "The minimum number of vCPUs. To specify no minimum limit, specify\
+      \ ``0``."
+  EC2LaunchTemplateLaunchTemplateDataPlacementTenancy5rmZ0:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The tenancy of the instance. An instance with a tenancy of dedicated\
+      \ runs on single-tenant hardware."
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsMemoryMiBMinVvi14:
+    NoEcho: "true"
+    Type: "Number"
+    Description: "The minimum amount of memory, in MiB. To specify no minimum limit,\
+      \ specify ``0``."
+  LambdaFunctionLambdaLOGSCodeS3KeyWscHC:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The Amazon S3 key of the deployment package."
+  EC2LaunchTemplateLaunchTemplateDataMetadataOptionsHttpProtocolIpv6pK084:
+    NoEcho: "true"
+    Type: "String"
+    Description: "Enables or disables the IPv6 endpoint for the instance metadata\
+      \ service.\n Default: ``disabled``"
+  EC2LaunchTemplateLaunchTemplateDataRamDiskIdqHkPG:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The ID of the RAM disk.\n  We recommend that you use PV-GRUB instead\
+      \ of kernels and RAM disks. For more information, see [User provided kernels](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UserProvidedkernels.html)\
+      \ in the *Amazon EC2 User Guide*."
+  LambdaFunctionLambdaLOGSCodeS3ObjectVersionIPAIn:
+    NoEcho: "true"
+    Type: "String"
+    Description: "For versioned objects, the version of the deployment package object\
+      \ to use."
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsExcludedInstanceTypes3FTYk:
+    NoEcho: "true"
+    Type: "CommaDelimitedList"
+    Description: "The instance types to exclude.\n You can use strings with one or\
+      \ more wild cards, represented by an asterisk (``*``), to exclude an instance\
+      \ type, size, or generation. The following are examples: ``m5.8xlarge``, ``c5*.*``,\
+      \ ``m5a.*``, ``r*``, ``*3*``.\n For example, if you specify ``c5*``,Amazon EC2\
+      \ will exclude the entire C5 instance family, which includes all C5a and C5n\
+      \ instance types. If you specify ``m5a.*``, Amazon EC2 will exclude all the\
+      \ M5a instance types, but not the M5n instance types.\n  If you specify ``ExcludedInstanceTypes``,\
+      \ you can't specify ``AllowedInstanceTypes``.\n  Default: No excluded instance\
+      \ types"
+  EC2LaunchTemplateLaunchTemplateDataEnclaveOptionsEnabledw7W2b:
+    NoEcho: "true"
+    Type: "String"
+    Description: "If this parameter is set to ``true``, the instance is enabled for\
+      \ AWS Nitro Enclaves; otherwise, it is not enabled for AWS Nitro Enclaves."
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsBurstablePerformancec8oTq:
+    NoEcho: "true"
+    Type: "String"
+    Description: "Indicates whether burstable performance T instance types are included,\
+      \ excluded, or required. For more information, see [Burstable performance instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html).\n\
+      \  +  To include burstable performance instance types, specify ``included``.\n\
+      \  +  To require only burstable performance instance types, specify ``required``.\n\
+      \  +  To exclude burstable performance instance types, specify ``excluded``.\n\
+      \  \n Default: ``excluded``"
+  EC2LaunchTemplateLaunchTemplateDataCreditSpecificationCpuCreditstKNLt:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The credit option for CPU usage of a T instance.\n Valid values:\
+      \ ``standard`` | ``unlimited``"
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsAcceleratorCountMinwlZWu:
+    NoEcho: "true"
+    Type: "Number"
+    Description: "The minimum number of accelerators. To specify no minimum limit,\
+      \ omit this parameter."
+  EC2LaunchTemplateLaunchTemplateDataPlacementHostIdBWfew:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The ID of the Dedicated Host for the instance."
+  EC2LaunchTemplateLaunchTemplateDataInstanceMarketOptionsMarketTypefla8r:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The market type."
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsAcceleratorNamesFgGOe:
+    NoEcho: "true"
+    Type: "CommaDelimitedList"
+    Description: "The accelerators that must be on the instance type.\n  +  For instance\
+      \ types with NVIDIA A10G GPUs, specify ``a10g``.\n  +  For instance types with\
+      \ NVIDIA A100 GPUs, specify ``a100``.\n  +  For instance types with NVIDIA H100\
+      \ GPUs, specify ``h100``.\n  +  For instance types with AWS Inferentia chips,\
+      \ specify ``inferentia``.\n  +  For instance types with AWS Inferentia2 chips,\
+      \ specify ``inferentia2``.\n  +  For instance types with Habana Gaudi HL-205\
+      \ GPUs, specify ``gaudi-hl-205``.\n  +  For instance types with NVIDIA GRID\
+      \ K520 GPUs, specify ``k520``.\n  +  For instance types with NVIDIA K80 GPUs,\
+      \ specify ``k80``.\n  +  For instance types with NVIDIA L4 GPUs, specify ``l4``.\n\
+      \  +  For instance types with NVIDIA L40S GPUs, specify ``l40s``.\n  +  For\
+      \ instance types with NVIDIA M60 GPUs, specify ``m60``.\n  +  For instance types\
+      \ with AMD Radeon Pro V520 GPUs, specify ``radeon-pro-v520``.\n  +  For instance\
+      \ types with AWS Trainium chips, specify ``trainium``.\n  +  For instance types\
+      \ with AWS Trainium2 chips, specify ``trainium2``.\n  +  For instance types\
+      \ with NVIDIA T4 GPUs, specify ``t4``.\n  +  For instance types with NVIDIA\
+      \ T4G GPUs, specify ``t4g``.\n  +  For instance types with Xilinx U30 cards,\
+      \ specify ``u30``.\n  +  For instance types with Xilinx VU9P FPGAs, specify\
+      \ ``vu9p``.\n  +  For instance types with NVIDIA V100 GPUs, specify ``v100``.\n\
+      \  \n Default: Any accelerator"
+  EC2LaunchTemplateLaunchTemplateDataMetadataOptionsHttpEndpointSZAWe:
+    NoEcho: "true"
+    Type: "String"
+    Description: "Enables or disables the HTTP metadata endpoint on your instances.\
+      \ If the parameter is not specified, the default state is ``enabled``.\n  If\
+      \ you specify a value of ``disabled``, you will not be able to access your instance\
+      \ metadata."
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsRequireHibernateSupportGTGdZ:
+    NoEcho: "true"
+    Type: "String"
+    Description: "Indicates whether instance types must support hibernation for On-Demand\
+      \ Instances.\n This parameter is not supported for [GetSpotPlacementScores](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetSpotPlacementScores.html).\n\
+      \ Default: ``false``"
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsAcceleratorTypess3Sph:
+    NoEcho: "true"
+    Type: "CommaDelimitedList"
+    Description: "The accelerator types that must be on the instance type.\n  +  For\
+      \ instance types with FPGA accelerators, specify ``fpga``.\n  +  For instance\
+      \ types with GPU accelerators, specify ``gpu``.\n  +  For instance types with\
+      \ Inference accelerators, specify ``inference``.\n  +  For instance types with\
+      \ Media accelerators, specify ``media``.\n  \n Default: Any accelerator type"
+  EC2LaunchTemplateLaunchTemplateDataCapacityReservationSpecificationCapacityReservationPreferencec2GEM:
+    NoEcho: "true"
+    Type: "String"
+    Description: "Indicates the instance's Capacity Reservation preferences. Possible\
+      \ preferences include:\n  +  ``capacity-reservations-only`` - The instance will\
+      \ only run in a Capacity Reservation or Capacity Reservation group. If capacity\
+      \ isn't available, the instance will fail to launch.\n  +  ``open`` - The instance\
+      \ can run in any ``open`` Capacity Reservation that has matching attributes\
+      \ (instance type, platform, Availability Zone, tenancy).\n  +  ``none`` - The\
+      \ instance avoids running in a Capacity Reservation even if one is available.\
+      \ The instance runs in On-Demand capacity."
+  EC2LaunchTemplateLaunchTemplateDataUserDatanOoxF:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The user data to make available to the instance. You must provide\
+      \ base64-encoded text. User data is limited to 16 KB. For more information,\
+      \ see [Run commands when you launch an EC2 instance with user data input](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html)\
+      \ in the *Amazon EC2 User Guide*.\n If you are creating the launch template\
+      \ for use with BATCH, the user data must be provided in the [MIME multi-part\
+      \ archive format](https://docs.aws.amazon.com/https://cloudinit.readthedocs.io/en/latest/topics/format.html#mime-multi-part-archive).\
+      \ For more information, see [Amazon EC2 user data in launch templates](https://docs.aws.amazon.com/batch/latest/userguide/launch-templates.html#lt-user-data)\
+      \ in the *User Guide*."
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsNetworkInterfaceCountMaxM8SnT:
+    NoEcho: "true"
+    Type: "Number"
+    Description: "The maximum number of network interfaces. To specify no maximum\
+      \ limit, omit this parameter."
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsAllowedInstanceTypeszF9ru:
+    NoEcho: "true"
+    Type: "CommaDelimitedList"
+    Description: "The instance types to apply your specified attributes against. All\
+      \ other instance types are ignored, even if they match your specified attributes.\n\
+      \ You can use strings with one or more wild cards, represented by an asterisk\
+      \ (``*``), to allow an instance type, size, or generation. The following are\
+      \ examples: ``m5.8xlarge``, ``c5*.*``, ``m5a.*``, ``r*``, ``*3*``.\n For example,\
+      \ if you specify ``c5*``,Amazon EC2 will allow the entire C5 instance family,\
+      \ which includes all C5a and C5n instance types. If you specify ``m5a.*``, Amazon\
+      \ EC2 will allow all the M5a instance types, but not the M5n instance types.\n\
+      \  If you specify ``AllowedInstanceTypes``, you can't specify ``ExcludedInstanceTypes``.\n\
+      \  Default: All instance types"
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsMaxSpotPriceAsPercentageOfOptimalOnDemandPriceYs3hB:
+    NoEcho: "true"
+    Type: "Number"
+    Description: "[Price protection] The price protection threshold for Spot Instances,\
+      \ as a percentage of an identified On-Demand price. The identified On-Demand\
+      \ price is the price of the lowest priced current generation C, M, or R instance\
+      \ type with your specified attributes. If no current generation C, M, or R instance\
+      \ type matches your attributes, then the identified price is from the lowest\
+      \ priced current generation instance types, and failing that, from the lowest\
+      \ priced previous generation instance types that match your attributes. When\
+      \ Amazon EC2 selects instance types with your attributes, it will exclude instance\
+      \ types whose price exceeds your specified threshold.\n The parameter accepts\
+      \ an integer, which Amazon EC2 interprets as a percentage.\n If you set ``TargetCapacityUnitType``\
+      \ to ``vcpu`` or ``memory-mib``, the price protection threshold is based on\
+      \ the per vCPU or per memory price instead of the per instance price.\n  Only\
+      \ one of ``SpotMaxPricePercentageOverLowestPrice`` or ``MaxSpotPriceAsPercentageOfOptimalOnDemandPrice``\
+      \ can be specified. If you don't specify either, Amazon EC2 will automatically\
+      \ apply optimal price protection to consistently select from a wide range of\
+      \ instance types. To indicate no price protection threshold for Spot Instances,\
+      \ meaning you want to consider all instance types that match your attributes,\
+      \ include one of these parameters and specify a high value, such as ``999999``."
+  EC2LaunchTemplateLaunchTemplateDataCpuOptionsAmdSevSnpTJnyg:
+    NoEcho: "true"
+    Type: "String"
+    Description: "Indicates whether to enable the instance for AMD SEV-SNP. AMD SEV-SNP\
+      \ is supported with M6a, R6a, and C6a instance types only. For more information,\
+      \ see [AMD SEV-SNP for Amazon EC2 instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/sev-snp.html).Possible\
+      \ values: [enabled, disabled]\nThis property can be replaced with other types"
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsCpuManufacturersNfuTR:
+    NoEcho: "true"
+    Type: "CommaDelimitedList"
+    Description: "The CPU manufacturers to include.\n  +  For instance types with\
+      \ Intel CPUs, specify ``intel``.\n  +  For instance types with AMD CPUs, specify\
+      \ ``amd``.\n  +  For instance types with AWS CPUs, specify ``amazon-web-services``.\n\
+      \  +  For instance types with Apple CPUs, specify ``apple``.\n  \n  Don't confuse\
+      \ the CPU manufacturer with the CPU architecture. Instances will be launched\
+      \ with a compatible CPU architecture based on the Amazon Machine Image (AMI)\
+      \ that you specify in your launch template.\n  Default: Any manufacturer"
+  LambdaFunctionLambdaLOGSCodeImageUriuqaKM:
+    NoEcho: "true"
+    Type: "String"
+    Description: "URI of a [container image](https://docs.aws.amazon.com/lambda/latest/dg/lambda-images.html)\
+      \ in the Amazon ECR registry."
+  EC2LaunchTemplateLaunchTemplateDataDisableApiTerminationBQawS:
+    NoEcho: "true"
+    Type: "String"
+    Description: "Indicates whether termination protection is enabled for the instance.\
+      \ The default is ``false``, which means that you can terminate the instance\
+      \ using the Amazon EC2 console, command line tools, or API. You can enable termination\
+      \ protection when you launch an instance, while the instance is running, or\
+      \ while the instance is stopped."
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsAcceleratorManufacturersaj2Yd:
+    NoEcho: "true"
+    Type: "CommaDelimitedList"
+    Description: "Indicates whether instance types must have accelerators by specific\
+      \ manufacturers.\n  +  For instance types with AWS devices, specify ``amazon-web-services``.\n\
+      \  +  For instance types with AMD devices, specify ``amd``.\n  +  For instance\
+      \ types with Habana devices, specify ``habana``.\n  +  For instance types with\
+      \ NVIDIA devices, specify ``nvidia``.\n  +  For instance types with Xilinx devices,\
+      \ specify ``xilinx``.\n  \n Default: Any manufacturer"
+  EC2LaunchTemplateLaunchTemplateDataPlacementHostResourceGroupArnSgd1d:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The ARN of the host resource group in which to launch the instances.\
+      \ If you specify a host resource group ARN, omit the *Tenancy* parameter or\
+      \ set it to ``host``."
+  EC2LaunchTemplateLaunchTemplateDataInstanceMarketOptionsSpotOptionsValidUntiluLe6b:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The end date of the request, in UTC format (*YYYY-MM-DD*T*HH:MM:SS*Z).\
+      \ Supported only for persistent requests.\n  +  For a persistent request, the\
+      \ request remains active until the ``ValidUntil`` date and time is reached.\
+      \ Otherwise, the request remains active until you cancel it.\n  +  For a one-time\
+      \ request, ``ValidUntil`` is not supported. The request remains active until\
+      \ all instances launch or you cancel the request.\n  \n Default: 7 days from\
+      \ the current date"
+  EC2LaunchTemplateLaunchTemplateDataPrivateDnsNameOptionsHostnameTypekRjZ0:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The type of hostname for EC2 instances. For IPv4 only subnets, an\
+      \ instance DNS name must be based on the instance IPv4 address. For IPv6 only\
+      \ subnets, an instance DNS name must be based on the instance ID. For dual-stack\
+      \ subnets, you can specify whether DNS names use the instance IPv4 address or\
+      \ the instance ID. For more information, see [Amazon EC2 instance hostname types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html)\
+      \ in the *User Guide*."
+  EC2LaunchTemplateLaunchTemplateDataInstanceMarketOptionsSpotOptionsMaxPricegQ1hF:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The maximum hourly price you're willing to pay for a Spot Instance.\
+      \ We do not recommend using this parameter because it can lead to increased\
+      \ interruptions. If you do not specify this parameter, you will pay the current\
+      \ Spot price. If you do specify this parameter, it must be more than USD $0.001.\
+      \ Specifying a value below USD $0.001 will result in an ``InvalidParameterValue``\
+      \ error message when the launch template is used to launch an instance.\n  If\
+      \ you specify a maximum price, your Spot Instances will be interrupted more\
+      \ frequently than if you do not specify this parameter."
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsTotalLocalStorageGBMino2GMu:
+    NoEcho: "true"
+    Type: "Number"
+    Description: "The minimum amount of total local storage, in GB. To specify no\
+      \ minimum limit, omit this parameter."
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsAcceleratorCountMaxFVumb:
+    NoEcho: "true"
+    Type: "Number"
+    Description: "The maximum number of accelerators. To specify no maximum limit,\
+      \ omit this parameter. To exclude accelerator-enabled instance types, set ``Max``\
+      \ to ``0``."
+  EC2LaunchTemplateLaunchTemplateDataCapacityReservationSpecificationCapacityReservationTargetCapacityReservationId7JxpP:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The ID of the Capacity Reservation in which to run the instance."
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsBareMetal8qqbb:
+    NoEcho: "true"
+    Type: "String"
+    Description: "Indicates whether bare metal instance types must be included, excluded,\
+      \ or required.\n  +  To include bare metal instance types, specify ``included``.\n\
+      \  +  To require only bare metal instance types, specify ``required``.\n  +\
+      \  To exclude bare metal instance types, specify ``excluded``.\n  \n Default:\
+      \ ``excluded``"
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsAcceleratorTotalMemoryMiBMinVrf8L:
+    NoEcho: "true"
+    Type: "Number"
+    Description: "The minimum amount of accelerator memory, in MiB. To specify no\
+      \ minimum limit, omit this parameter."
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsMemoryMiBMax0q1v3:
+    NoEcho: "true"
+    Type: "Number"
+    Description: "The maximum amount of memory, in MiB. To specify no maximum limit,\
+      \ omit this parameter."
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsTotalLocalStorageGBMaxERm8o:
+    NoEcho: "true"
+    Type: "Number"
+    Description: "The maximum amount of total local storage, in GB. To specify no\
+      \ maximum limit, omit this parameter."
+  LambdaFunctionTask2s3toprivateec2CodeImageUrivrm1o:
+    NoEcho: "true"
+    Type: "String"
+    Description: "URI of a [container image](https://docs.aws.amazon.com/lambda/latest/dg/lambda-images.html)\
+      \ in the Amazon ECR registry."
+  EC2LaunchTemplateLaunchTemplateDataPrivateDnsNameOptionsEnableResourceNameDnsAAAARecordOpd3o:
+    NoEcho: "true"
+    Type: "String"
+    Description: "Indicates whether to respond to DNS queries for instance hostnames\
+      \ with DNS AAAA records."
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsVCpuCountMaxnp3PX:
+    NoEcho: "true"
+    Type: "Number"
+    Description: "The maximum number of vCPUs. To specify no maximum limit, omit this\
+      \ parameter."
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsAcceleratorTotalMemoryMiBMaxr13oB:
+    NoEcho: "true"
+    Type: "Number"
+    Description: "The maximum amount of accelerator memory, in MiB. To specify no\
+      \ maximum limit, omit this parameter."
+  EC2LaunchTemplateLaunchTemplateDataHibernationOptionsConfiguredUAzwR:
+    NoEcho: "true"
+    Type: "String"
+    Description: "If you set this parameter to ``true``, the instance is enabled for\
+      \ hibernation.\n Default: ``false``"
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsBaselineEbsBandwidthMbpsMinCUEEO:
+    NoEcho: "true"
+    Type: "Number"
+    Description: "The minimum baseline bandwidth, in Mbps. To specify no minimum limit,\
+      \ omit this parameter."
+  EC2LaunchTemplateLaunchTemplateDataCapacityReservationSpecificationCapacityReservationTargetCapacityReservationResourceGroupArnLB9qo:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The ARN of the Capacity Reservation resource group in which to run\
+      \ the instance."
+  EC2LaunchTemplateLaunchTemplateDataPrivateDnsNameOptionsEnableResourceNameDnsARecordgNJZ9:
+    NoEcho: "true"
+    Type: "String"
+    Description: "Indicates whether to respond to DNS queries for instance hostnames\
+      \ with DNS A records."
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsLocalStorage45Rhy:
+    NoEcho: "true"
+    Type: "String"
+    Description: "Indicates whether instance types with instance store volumes are\
+      \ included, excluded, or required. For more information, [Amazon EC2 instance\
+      \ store](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html)\
+      \ in the *Amazon EC2 User Guide*.\n  +  To include instance types with instance\
+      \ store volumes, specify ``included``.\n  +  To require only instance types\
+      \ with instance store volumes, specify ``required``.\n  +  To exclude instance\
+      \ types with instance store volumes, specify ``excluded``.\n  \n Default: ``included``"
+  EC2LaunchTemplateLaunchTemplateDataInstanceMarketOptionsSpotOptionsInstanceInterruptionBehaviorXc0LU:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The behavior when a Spot Instance is interrupted. The default is\
+      \ ``terminate``."
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsNetworkInterfaceCountMinLzDyf:
+    NoEcho: "true"
+    Type: "Number"
+    Description: "The minimum number of network interfaces. To specify no minimum\
+      \ limit, omit this parameter."
+  EC2LaunchTemplateLaunchTemplateDataCpuOptionsCoreCountPEGZE:
+    NoEcho: "true"
+    Type: "Number"
+    Description: "The number of CPU cores for the instance."
+  EC2LaunchTemplateLaunchTemplateDataInstanceTypeszc0W:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The instance type. For more information, see [Amazon EC2 instance\
+      \ types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html)\
+      \ in the *Amazon EC2 User Guide*.\n If you specify ``InstanceType``, you can't\
+      \ specify ``InstanceRequirements``."
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsBaselineEbsBandwidthMbpsMaxQWME0:
+    NoEcho: "true"
+    Type: "Number"
+    Description: "The maximum baseline bandwidth, in Mbps. To specify no maximum limit,\
+      \ omit this parameter."
+  EC2LaunchTemplateLaunchTemplateDataSecurityGroupIds8UNO6:
+    NoEcho: "true"
+    Type: "CommaDelimitedList"
+    Description: "The IDs of the security groups. You can specify the IDs of existing\
+      \ security groups and references to resources created by the stack template.\n\
+      \ If you specify a network interface, you must specify any security groups as\
+      \ part of the network interface instead."
+  EC2LaunchTemplateLaunchTemplateDataIamInstanceProfileNameL1hPo:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The name of the instance profile."
+  EC2LaunchTemplateLaunchTemplateDataPlacementAvailabilityZoneFkvo4:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The Availability Zone for the instance.\n Either ``AvailabilityZone``\
+      \ or ``AvailabilityZoneId`` can be specified, but not both"
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsOnDemandMaxPricePercentageOverLowestPricezMEz6:
+    NoEcho: "true"
+    Type: "Number"
+    Description: "[Price protection] The price protection threshold for On-Demand\
+      \ Instances, as a percentage higher than an identified On-Demand price. The\
+      \ identified On-Demand price is the price of the lowest priced current generation\
+      \ C, M, or R instance type with your specified attributes. When Amazon EC2 selects\
+      \ instance types with your attributes, it will exclude instance types whose\
+      \ price exceeds your specified threshold.\n The parameter accepts an integer,\
+      \ which Amazon EC2 interprets as a percentage.\n To turn off price protection,\
+      \ specify a high value, such as ``999999``.\n This parameter is not supported\
+      \ for [GetSpotPlacementScores](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetSpotPlacementScores.html)\
+      \ and [GetInstanceTypesFromInstanceRequirements](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceTypesFromInstanceRequirements.html).\n\
+      \  If you set ``TargetCapacityUnitType`` to ``vcpu`` or ``memory-mib``, the\
+      \ price protection threshold is applied based on the per-vCPU or per-memory\
+      \ price instead of the per-instance price.\n  Default: ``20``"
+  EC2LaunchTemplateLaunchTemplateDataNetworkPerformanceOptionsBandwidthWeighting7oZjj:
+    NoEcho: "true"
+    Type: "String"
+    Description: "Specify the bandwidth weighting option to boost the associated type\
+      \ of baseline bandwidth, as follows:\n  + default This option uses the standard\
+      \ bandwidth configuration for your instance type. + vpc-1 This option boosts\
+      \ your networking baseline bandwidth and reduces your EBS baseline bandwidth.\
+      \ + ebs-1 This option boosts your EBS baseline bandwidth and reduces your networking\
+      \ baseline bandwidth."
+  LambdaFunctionLambdaLOGSCodeS3ObjectStorageModeYTQWz:
+    NoEcho: "true"
+    Type: "String"
+    Description: "Specifies the storage mode for the deployment package. Use ``COPY``\
+      \ to store the package in LAMlong-managed storage. Use ``REFERENCE`` to read\
+      \ the package directly from the Amazon S3 bucket. If omitted, the default is\
+      \ ``COPY``.Possible values: [COPY, REFERENCE]\nThis property can be replaced\
+      \ with other types"
+  EC2LaunchTemplateLaunchTemplateDataPlacementPartitionNumberMRVAM:
+    NoEcho: "true"
+    Type: "Number"
+    Description: "The number of the partition the instance should launch in. Valid\
+      \ only if the placement group strategy is set to ``partition``."
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsNetworkBandwidthGbpsMax4nsth:
+    NoEcho: "true"
+    Type: "Number"
+    Description: "The maximum amount of network bandwidth, in Gbps. To specify no\
+      \ maximum limit, omit this parameter."
+  EC2LaunchTemplateLaunchTemplateDataEbsOptimizedCUFON:
+    NoEcho: "true"
+    Type: "String"
+    Description: "Indicates whether the instance is optimized for Amazon EBS I/O.\
+      \ This optimization provides dedicated throughput to Amazon EBS and an optimized\
+      \ configuration stack to provide optimal Amazon EBS I/O performance. This optimization\
+      \ isn't available with all instance types. Additional usage charges apply when\
+      \ using an EBS-optimized instance."
+  LambdaFunctionTask2s3toprivateec2CodeSourceKMSKeyArnFAzJH:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The ARN of the KMSlong (KMS) customer managed key that's used to\
+      \ encrypt your function's .zip deployment package. If you don't provide a customer\
+      \ managed key, Lambda uses an [owned key](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-owned-cmk)."
+  LambdaFunctionTask2s3toprivateec2CodeZipFilePs8uJ:
+    NoEcho: "true"
+    Type: "String"
+    Description: "(Node.js and Python) The source code of your Lambda function. If\
+      \ you include your function source inline with this parameter, CFN places it\
+      \ in a file named ``index`` and zips it to create a [deployment package](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html).\
+      \ This zip file cannot exceed 4MB. For the ``Handler`` property, the first part\
+      \ of the handler identifier must be ``index``. For example, ``index.handler``.\n\
+      \  When you specify source code inline for a Node.js function, the ``index``\
+      \ file that CFN creates uses the extension ``.js``. This means that Node.js\
+      \ treats the file as a CommonJS module.\n When using Node.js 24 or later, Node.js\
+      \ can automatically detect if a ``.js`` file should be treated as CommonJS or\
+      \ as an ES module. To enable auto-detection, add the ``--experimental-detect-module``\
+      \ flag to the ``NODE_OPTIONS`` environment variable. For more information, see\
+      \ [Experimental Node.js features](https://docs.aws.amazon.com//lambda/latest/dg/lambda-nodejs.html#nodejs-experimental-features).\n\
+      \   For JSON, you must escape quotes and special characters such as newline\
+      \ (``\\n``) with a backslash.\n If you specify a function that interacts with\
+      \ an AWS CloudFormation custom resource, you don't have to write your own functions\
+      \ to send responses to the custom resource that invoked the function. AWS CloudFormation\
+      \ provides a response module ([cfn-response](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-lambda-function-code-cfnresponsemodule.html))\
+      \ that simplifies sending responses. See [Using Lambda with CloudFormation](https://docs.aws.amazon.com/lambda/latest/dg/services-cloudformation.html)\
+      \ for details."
+  LambdaFunctionTask2s3toprivateec2CodeS3BucketDaDeH:
+    NoEcho: "true"
+    Type: "String"
+    Description: "An Amazon S3 bucket in the same AWS-Region as your function. The\
+      \ bucket can be in a different AWS-account."
+  EC2LaunchTemplateLaunchTemplateDataIamInstanceProfileArnQwicL:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The Amazon Resource Name (ARN) of the instance profile."
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsNetworkBandwidthGbpsMinx8ldF:
+    NoEcho: "true"
+    Type: "Number"
+    Description: "The minimum amount of network bandwidth, in Gbps. If this parameter\
+      \ is not specified, there is no minimum limit."
+  LambdaFunctionLambdaLOGSCodeS3BucketEGjcA:
+    NoEcho: "true"
+    Type: "String"
+    Description: "An Amazon S3 bucket in the same AWS-Region as your function. The\
+      \ bucket can be in a different AWS-account."
+  EC2LaunchTemplateLaunchTemplateDataMonitoringEnabledDIhYz:
+    NoEcho: "true"
+    Type: "String"
+    Description: "Specify ``true`` to enable detailed monitoring. Otherwise, basic\
+      \ monitoring is enabled."
+  EC2LaunchTemplateLaunchTemplateDataImageIdXrKFk:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The ID of the AMI. Alternatively, you can specify a Systems Manager\
+      \ parameter, which will resolve to an AMI ID on launch.\n Valid formats:\n \
+      \ +   ``ami-0ac394d6a3example`` \n  +   ``resolve:ssm:parameter-name`` \n  +\
+      \   ``resolve:ssm:parameter-name:version-number`` \n  +   ``resolve:ssm:parameter-name:label``\
+      \ \n  \n For more information, see [Use a Systems Manager parameter to find\
+      \ an AMI](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html#using-systems-manager-parameter-to-find-AMI)\
+      \ in the *Amazon Elastic Compute Cloud User Guide*."
+  LambdaFunctionTask2s3toprivateec2CodeS3KeyNQLpC:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The Amazon S3 key of the deployment package."
+  EC2LaunchTemplateLaunchTemplateDataMaintenanceOptionsAutoRecoverybDyHq:
+    NoEcho: "true"
+    Type: "String"
+    Description: "Disables the automatic recovery behavior of your instance or sets\
+      \ it to default."
+  KeyName2:
+    Default: "ec2A"
+    Type: "String"
+    Description: "Name of an existing EC2 KeyPair to enable SSH access"
+  EC2LaunchTemplateLaunchTemplateDataMetadataOptionsHttpTokensqW6We:
+    NoEcho: "true"
+    Type: "String"
+    Description: "Indicates whether IMDSv2 is required.\n  +  ``optional`` - IMDSv2\
+      \ is optional. You can choose whether to send a session token in your instance\
+      \ metadata retrieval requests. If you retrieve IAM role credentials without\
+      \ a session token, you receive the IMDSv1 role credentials. If you retrieve\
+      \ IAM role credentials using a valid session token, you receive the IMDSv2 role\
+      \ credentials.\n  +  ``required`` - IMDSv2 is required. You must send a session\
+      \ token in your instance metadata retrieval requests. With this option, retrieving\
+      \ the IAM role credentials always returns IMDSv2 credentials; IMDSv1 credentials\
+      \ are not available.\n  \n Default: If the value of ``ImdsSupport`` for the\
+      \ Amazon Machine Image (AMI) for your instance is ``v2.0``, the default is ``required``."
+  EC2LaunchTemplateLaunchTemplateDataCpuOptionsThreadsPerCoretMAkY:
+    NoEcho: "true"
+    Type: "Number"
+    Description: "The number of threads per CPU core. To disable multithreading for\
+      \ the instance, specify a value of ``1``. Otherwise, specify the default value\
+      \ of ``2``."
+  EC2LaunchTemplateLaunchTemplateDataMetadataOptionsInstanceMetadataTagsxpURX:
+    NoEcho: "true"
+    Type: "String"
+    Description: "Set to ``enabled`` to allow access to instance tags from the instance\
+      \ metadata. Set to ``disabled`` to turn off access to instance tags from the\
+      \ instance metadata. For more information, see [View tags for your EC2 instances\
+      \ using instance metadata](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/work-with-tags-in-IMDS.html).\n\
+      \ Default: ``disabled``"
+  EC2LaunchTemplateLaunchTemplateDataInstanceMarketOptionsSpotOptionsSpotInstanceTypeMGfhD:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The Spot Instance request type.\n If you are using Spot Instances\
+      \ with an Auto Scaling group, use ``one-time`` requests, as the ASlong service\
+      \ handles requesting new Spot Instances whenever the group is below its desired\
+      \ capacity."
+  EC2LaunchTemplateLaunchTemplateDataCpuOptionsNestedVirtualizationOBs43:
+    NoEcho: "true"
+    Type: "String"
+    Description: "Indicates whether the instance is enabled for nested virtualization.Possible\
+      \ values: [enabled, disabled]\nThis property can be replaced with other types"
+  EC2LaunchTemplateLaunchTemplateDataPlacementGroupNameB6N9w:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The name of the placement group for the instance."
+  LambdaFunctionLambdaLOGSCodeZipFileOcbxo:
+    NoEcho: "true"
+    Type: "String"
+    Description: "(Node.js and Python) The source code of your Lambda function. If\
+      \ you include your function source inline with this parameter, CFN places it\
+      \ in a file named ``index`` and zips it to create a [deployment package](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html).\
+      \ This zip file cannot exceed 4MB. For the ``Handler`` property, the first part\
+      \ of the handler identifier must be ``index``. For example, ``index.handler``.\n\
+      \  When you specify source code inline for a Node.js function, the ``index``\
+      \ file that CFN creates uses the extension ``.js``. This means that Node.js\
+      \ treats the file as a CommonJS module.\n When using Node.js 24 or later, Node.js\
+      \ can automatically detect if a ``.js`` file should be treated as CommonJS or\
+      \ as an ES module. To enable auto-detection, add the ``--experimental-detect-module``\
+      \ flag to the ``NODE_OPTIONS`` environment variable. For more information, see\
+      \ [Experimental Node.js features](https://docs.aws.amazon.com//lambda/latest/dg/lambda-nodejs.html#nodejs-experimental-features).\n\
+      \   For JSON, you must escape quotes and special characters such as newline\
+      \ (``\\n``) with a backslash.\n If you specify a function that interacts with\
+      \ an AWS CloudFormation custom resource, you don't have to write your own functions\
+      \ to send responses to the custom resource that invoked the function. AWS CloudFormation\
+      \ provides a response module ([cfn-response](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-lambda-function-code-cfnresponsemodule.html))\
+      \ that simplifies sending responses. See [Using Lambda with CloudFormation](https://docs.aws.amazon.com/lambda/latest/dg/services-cloudformation.html)\
+      \ for details."
+  LambdaFunctionTask2s3toprivateec2CodeS3ObjectStorageModesvlfl:
+    NoEcho: "true"
+    Type: "String"
+    Description: "Specifies the storage mode for the deployment package. Use ``COPY``\
+      \ to store the package in LAMlong-managed storage. Use ``REFERENCE`` to read\
+      \ the package directly from the Amazon S3 bucket. If omitted, the default is\
+      \ ``COPY``.Possible values: [COPY, REFERENCE]\nThis property can be replaced\
+      \ with other types"
+  EC2LaunchTemplateLaunchTemplateDataPlacementGroupIdsQ5Ni:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The Group Id of a placement group. You must specify the Placement\
+      \ Group *Group Id* to launch an instance in a shared placement group."
+  EC2LaunchTemplateLaunchTemplateDataKernelIdeA70P:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The ID of the kernel.\n We recommend that you use PV-GRUB instead\
+      \ of kernels and RAM disks. For more information, see [User Provided Kernels](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UserProvidedkernels.html)\
+      \ in the *Amazon EC2 User Guide*."
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsMemoryGiBPerVCpuMinxB8UV:
+    NoEcho: "true"
+    Type: "Number"
+    Description: "The minimum amount of memory per vCPU, in GiB. To specify no minimum\
+      \ limit, omit this parameter."
+  EC2LaunchTemplateLaunchTemplateDataMetadataOptionsHttpPutResponseHopLimitPf2Km:
+    NoEcho: "true"
+    Type: "Number"
+    Description: "The desired HTTP PUT response hop limit for instance metadata requests.\
+      \ The larger the number, the further instance metadata requests can travel.\n\
+      \ Default: ``1``\n Possible values: Integers from 1 to 64"
+  EC2LaunchTemplateLaunchTemplateDataPlacementSpreadDomainFNUlg:
+    NoEcho: "true"
+    Type: "String"
+    Description: "Reserved for future use."
+  EC2LaunchTemplateLaunchTemplateDataInstanceInitiatedShutdownBehavior1a7ZL:
+    NoEcho: "true"
+    Type: "String"
+    Description: "Indicates whether an instance stops or terminates when you initiate\
+      \ shutdown from the instance (using the operating system command for system\
+      \ shutdown).\n Default: ``stop``"
+  KeyName:
+    Default: "ec2B"
+    Type: "String"
+    Description: "Name of an existing EC2 KeyPair to enable SSH access"
+  EC2LaunchTemplateLaunchTemplateDataDisableApiStopmfeI4:
+    NoEcho: "true"
+    Type: "String"
+    Description: "Indicates whether to enable the instance for stop protection. For\
+      \ more information, see [Enable stop protection for your EC2 instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-stop-protection.html)\
+      \ in the *Amazon EC2 User Guide*."
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsSpotMaxPricePercentageOverLowestPricel6WSi:
+    NoEcho: "true"
+    Type: "Number"
+    Description: "[Price protection] The price protection threshold for Spot Instances,\
+      \ as a percentage higher than an identified Spot price. The identified Spot\
+      \ price is the Spot price of the lowest priced current generation C, M, or R\
+      \ instance type with your specified attributes. If no current generation C,\
+      \ M, or R instance type matches your attributes, then the identified Spot price\
+      \ is from the lowest priced current generation instance types, and failing that,\
+      \ from the lowest priced previous generation instance types that match your\
+      \ attributes. When Amazon EC2 selects instance types with your attributes, it\
+      \ will exclude instance types whose Spot price exceeds your specified threshold.\n\
+      \ The parameter accepts an integer, which Amazon EC2 interprets as a percentage.\n\
+      \ If you set ``TargetCapacityUnitType`` to ``vcpu`` or ``memory-mib``, the price\
+      \ protection threshold is applied based on the per-vCPU or per-memory price\
+      \ instead of the per-instance price.\n This parameter is not supported for [GetSpotPlacementScores](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetSpotPlacementScores.html)\
+      \ and [GetInstanceTypesFromInstanceRequirements](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceTypesFromInstanceRequirements.html).\n\
+      \  Only one of ``SpotMaxPricePercentageOverLowestPrice`` or ``MaxSpotPriceAsPercentageOfOptimalOnDemandPrice``\
+      \ can be specified. If you don't specify either, Amazon EC2 will automatically\
+      \ apply optimal price protection to consistently select from a wide range of\
+      \ instance types. To indicate no price protection threshold for Spot Instances,\
+      \ meaning you want to consider all instance types that match your attributes,\
+      \ include one of these parameters and specify a high value, such as ``999999``.\n\
+      \  Default: ``100``"
+  EC2LaunchTemplateLaunchTemplateDataSecurityGroupsCdYEt:
+    NoEcho: "true"
+    Type: "CommaDelimitedList"
+    Description: "The names of the security groups. For a nondefault VPC, you must\
+      \ use security group IDs instead.\n If you specify a network interface, you\
+      \ must specify any security groups as part of the network interface instead\
+      \ of using this parameter."
+  LambdaFunctionLambdaLOGSCodeSourceKMSKeyArnHiNtX:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The ARN of the KMSlong (KMS) customer managed key that's used to\
+      \ encrypt your function's .zip deployment package. If you don't provide a customer\
+      \ managed key, Lambda uses an [owned key](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-owned-cmk)."
+  LambdaFunctionTask2s3toprivateec2CodeS3ObjectVersionXnCA9:
+    NoEcho: "true"
+    Type: "String"
+    Description: "For versioned objects, the version of the deployment package object\
+      \ to use."
+  EC2LaunchTemplateLaunchTemplateDataInstanceMarketOptionsSpotOptionsBlockDurationMinutesyRsRK:
+    NoEcho: "true"
+    Type: "Number"
+    Description: "Deprecated."
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsLocalStorageTypesDAP9b:
+    NoEcho: "true"
+    Type: "CommaDelimitedList"
+    Description: "The type of local storage that is required.\n  +  For instance types\
+      \ with hard disk drive (HDD) storage, specify ``hdd``.\n  +  For instance types\
+      \ with solid state drive (SSD) storage, specify ``ssd``.\n  \n Default: ``hdd``\
+      \ and ``ssd``"
+Resources:
+  EC2SecurityGroupXM:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::SecurityGroup"
+    DeletionPolicy: "Retain"
+    Properties:
+      GroupDescription: "Security group for Load balancer"
+      GroupName: "cloud-SG-LB"
+      VpcId: "vpc-009590ce365f16dbd"
+      SecurityGroupIngress:
+      - CidrIp: "0.0.0.0/0"
+        IpProtocol: "tcp"
+        FromPort: 80
+        ToPort: 80
+      SecurityGroupEgress:
+      - IpProtocol: "tcp"
+        DestinationSecurityGroupId: "sg-071d7264877133d3a"
+        FromPort: 80
+        ToPort: 80
+  EC2SubnetNetworkAclAssociationHN:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::SubnetNetworkAclAssociation"
+    DeletionPolicy: "Retain"
+    Properties:
+      NetworkAclId: "acl-04cfc01ff08421835"
+      SubnetId: "subnet-0f2c0dad527f386e1"
+  S3BucketTask2storefromlambda:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::S3::Bucket"
+    DeletionPolicy: "Retain"
+    Properties:
+      AbacStatus: "Disabled"
+      NotificationConfiguration:
+        QueueConfigurations: []
+        TopicConfigurations: []
+        LambdaConfigurations:
+        - Function: "arn:aws:lambda:eu-north-1:137687463360:function:task2-s3-to-private-ec2"
+          Event: "s3:ObjectCreated:*"
+      PublicAccessBlockConfiguration:
+        RestrictPublicBuckets: true
+        IgnorePublicAcls: true
+        BlockPublicPolicy: true
+        BlockPublicAcls: true
+      BucketName: "task2-storefromlambda"
+      OwnershipControls:
+        Rules:
+        - ObjectOwnership: "BucketOwnerEnforced"
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+        - BucketKeyEnabled: true
+          BlockedEncryptionTypes:
+            EncryptionType:
+            - "SSE-C"
+          ServerSideEncryptionByDefault:
+            SSEAlgorithm: "AES256"
+  EC2VPCGatewayAttachmentIGW:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::VPCGatewayAttachment"
+    DeletionPolicy: "Retain"
+    Properties:
+      InternetGatewayId: "igw-090a0eaceff2bf41b"
+      VpcId: "vpc-009590ce365f16dbd"
+  ElasticLoadBalancingV2LoadBalancerLoadbalancerappmyLBa647f5a1a2d74a58:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::ElasticLoadBalancingV2::LoadBalancer"
+    DeletionPolicy: "Retain"
+    Properties:
+      IpAddressType: "ipv4"
+      SecurityGroups:
+      - "sg-0a65515e3279b61fe"
+      LoadBalancerAttributes:
+      - Value: ""
+        Key: "access_logs.s3.prefix"
+      - Value: "append"
+        Key: "routing.http.xff_header_processing.mode"
+      - Value: "true"
+        Key: "routing.http2.enabled"
+      - Value: "false"
+        Key: "waf.fail_open.enabled"
+      - Value: ""
+        Key: "connection_logs.s3.bucket"
+      - Value: "false"
+        Key: "access_logs.s3.enabled"
+      - Value: "false"
+        Key: "zonal_shift.config.enabled"
+      - Value: "defensive"
+        Key: "routing.http.desync_mitigation_mode"
+      - Value: ""
+        Key: "connection_logs.s3.prefix"
+      - Value: ""
+        Key: "health_check_logs.s3.prefix"
+      - Value: "false"
+        Key: "routing.http.x_amzn_tls_version_and_cipher_suite.enabled"
+      - Value: "false"
+        Key: "routing.http.preserve_host_header.enabled"
+      - Value: "true"
+        Key: "load_balancing.cross_zone.enabled"
+      - Value: "false"
+        Key: "health_check_logs.s3.enabled"
+      - Value: ""
+        Key: "health_check_logs.s3.bucket"
+      - Value: "false"
+        Key: "routing.http.xff_client_port.enabled"
+      - Value: ""
+        Key: "access_logs.s3.bucket"
+      - Value: "false"
+        Key: "deletion_protection.enabled"
+      - Value: "3600"
+        Key: "client_keep_alive.seconds"
+      - Value: "false"
+        Key: "routing.http.drop_invalid_header_fields.enabled"
+      - Value: "false"
+        Key: "connection_logs.s3.enabled"
+      - Value: "60"
+        Key: "idle_timeout.timeout_seconds"
+      Subnets:
+      - "subnet-075f958b3003e3dda"
+      - "subnet-0986408666ea9a9ab"
+      Type: "application"
+      Scheme: "internet-facing"
+      EnablePrefixForIpv6SourceNat: "off"
+      Tags: []
+      Name: "myLB"
+      SubnetMappings:
+      - SubnetId: "subnet-0986408666ea9a9ab"
+      - SubnetId: "subnet-075f958b3003e3dda"
+  RDSDBParameterGroupDefaultaurorapostgresql17:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::RDS::DBParameterGroup"
+    DeletionPolicy: "Retain"
+    Properties:
+      DBParameterGroupName: "default.aurora-postgresql17"
+      Family: "aurora-postgresql17"
+      Description: "Default parameter group for aurora-postgresql17"
+      Parameters: {}
+  EC2SubnetNetworkAclAssociation:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::SubnetNetworkAclAssociation"
+    DeletionPolicy: "Retain"
+    Properties:
+      NetworkAclId: "acl-04cfc01ff08421835"
+      SubnetId: "subnet-00b36ff7a957d81cf"
+  RDSDBClusterParameterGroupDefaultaurorapostgresql17:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::RDS::DBClusterParameterGroup"
+    DeletionPolicy: "Retain"
+    Properties:
+      Family: "aurora-postgresql17"
+      DBClusterParameterGroupName: "default.aurora-postgresql17"
+      Description: "Default cluster parameter group for aurora-postgresql17"
+      Parameters: {}
+      Tags: []
+  EFSMountTargetGb:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EFS::MountTarget"
+    DeletionPolicy: "Retain"
+    Properties:
+      SecurityGroups:
+      - "sg-01d59de241ad87a6f"
+      - "sg-04317d68c757e736a"
+      - "sg-031aed01514d76c47"
+      FileSystemId: "fs-040ba3714a10fb1dd"
+      IpAddress: "192.168.1.102"
+      SubnetId: "subnet-0b614301ec1332207"
+  EC2InstanceBT:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::Instance"
+    DeletionPolicy: "Retain"
+    Properties:
+      Tenancy: "default"
+      PrivateIpAddress: "192.168.1.79"
+      MetadataOptions:
+        HttpPutResponseHopLimit: 2
+        HttpProtocolIpv6: "disabled"
+        HttpTokens: "required"
+        InstanceMetadataTags: "disabled"
+        HttpEndpoint: "enabled"
+      UserData: "I2Nsb3VkLWNvbmZpZwpwYWNrYWdlX3VwZGF0ZTogdHJ1ZQpwYWNrYWdlX3VwZ3JhZGU6IHRydWUKcnVuY21kOgotIHl1bSBpbnN0YWxsIC15IGFtYXpvbi1lZnMtdXRpbHMKLSBhcHQtZ2V0IC15IGluc3RhbGwgYW1hem9uLWVmcy11dGlscwotIHl1bSBpbnN0YWxsIC15IG5mcy11dGlscwotIGFwdC1nZXQgLXkgaW5zdGFsbCBuZnMtY29tbW9uCi0gZmlsZV9zeXN0ZW1faWRfMT1mcy0wNDBiYTM3MTRhMTBmYjFkZAotIGVmc19tb3VudF9wb2ludF8xPS9tbnQvZWZzL2ZzMQotIG1rZGlyIC1wICIke2Vmc19tb3VudF9wb2ludF8xfSIKLSB0ZXN0IC1mICIvc2Jpbi9tb3VudC5lZnMiICYmIHByaW50ZiAiXG4ke2ZpbGVfc3lzdGVtX2lkXzF9Oi8gJHtlZnNfbW91bnRfcG9pbnRfMX0gZWZzIHRscyxfbmV0ZGV2XG4iID4+IC9ldGMvZnN0YWIgfHwgcHJpbnRmICJcbiR7ZmlsZV9zeXN0ZW1faWRfMX0uZWZzLmV1LW5vcnRoLTEuYW1hem9uYXdzLmNvbTovICR7ZWZzX21vdW50X3BvaW50XzF9IG5mczQgbmZzdmVycz00LjEscnNpemU9MTA0ODU3Nix3c2l6ZT0xMDQ4NTc2LGhhcmQsdGltZW89NjAwLHJldHJhbnM9Mixub3Jlc3Zwb3J0LF9uZXRkZXYgMCAwXG4iID4+IC9ldGMvZnN0YWIKLSB0ZXN0IC1mICIvc2Jpbi9tb3VudC5lZnMiICYmIGdyZXAgLW96UCAnY2xpZW50LWluZm9dXG5zb3VyY2UnICcvZXRjL2FtYXpvbi9lZnMvZWZzLXV0aWxzLmNvbmYnOyBpZiBbWyAkPyA9PSAxIF1dOyB0aGVuIHByaW50ZiAiXG5bY2xpZW50LWluZm9dXG5zb3VyY2U9bGl3XG4iID4+IC9ldGMvYW1hem9uL2Vmcy9lZnMtdXRpbHMuY29uZjsgZmk7Ci0gcmV0cnlDbnQ9MTU7IHdhaXRUaW1lPTMwOyB3aGlsZSB0cnVlOyBkbyBtb3VudCAtYSAtdCBlZnMsbmZzNCBkZWZhdWx0czsgaWYgWyAkPyA9IDAgXSB8fCBbICRyZXRyeUNudCAtbHQgMSBdOyB0aGVuIGVjaG8gRmlsZSBzeXN0ZW0gbW91bnRlZCBzdWNjZXNzZnVsbHk7IGJyZWFrOyBmaTsgZWNobyBGaWxlIHN5c3RlbSBub3QgYXZhaWxhYmxlLCByZXRyeWluZyB0byBtb3VudC47ICgocmV0cnlDbnQtLSkpOyBzbGVlcCAkd2FpdFRpbWU7IGRvbmU7Cg=="
+      InstanceInitiatedShutdownBehavior: "stop"
+      BlockDeviceMappings:
+      - Ebs:
+          SnapshotId: "snap-0ca7408b4331da225"
+          VolumeType: "gp3"
+          Iops: 3000
+          VolumeSize: 8
+          Encrypted: false
+          DeleteOnTermination: true
+        DeviceName: "/dev/sda1"
+      PrivateDnsNameOptions:
+        EnableResourceNameDnsARecord: false
+        HostnameType: "ip-name"
+        EnableResourceNameDnsAAAARecord: false
+      SecurityGroupIds:
+      - "sg-0a65515e3279b61fe"
+      - "sg-0e8826539a6dd207f"
+      - "sg-04317d68c757e736a"
+      - "sg-071d7264877133d3a"
+      EbsOptimized: true
+      DisableApiTermination: false
+      SourceDestCheck: true
+      PlacementGroupName: ""
+      NetworkInterfaces:
+      - Ipv6Addresses: []
+        SecondaryPrivateIpAddressCount: 0
+        NetworkInterfaceId: "eni-0857f71962ddffd86"
+        DeviceIndex: "0"
+      ImageId: "ami-0aba19e56f3eaec05"
+      InstanceType: "t3.micro"
+      Monitoring: false
+      Tags:
+      - Value: "cloud-ec2A"
+        Key: "Name"
+      CreditSpecification:
+        CPUCredits: "unlimited"
+  EC2NatGateway:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::NatGateway"
+    DeletionPolicy: "Retain"
+    Properties:
+      ConnectivityType: "public"
+      VpcId: "vpc-009590ce365f16dbd"
+      AvailabilityZoneAddresses:
+      - AvailabilityZoneId: "eun1-az2"
+        AvailabilityZone: "eu-north-1b"
+        AllocationIds:
+        - "eipalloc-0fd1f90a707c1b6f3"
+      - AvailabilityZoneId: "eun1-az1"
+        AvailabilityZone: "eu-north-1a"
+        AllocationIds:
+        - "eipalloc-09fcaf8dc9c520b8c"
+      AvailabilityMode: "regional"
+      Tags:
+      - Value: "cloud-NAT"
+        Key: "Name"
+  EC2SubnetNetworkAclAssociationPA:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::SubnetNetworkAclAssociation"
+    DeletionPolicy: "Retain"
+    Properties:
+      NetworkAclId: "acl-04cfc01ff08421835"
+      SubnetId: "subnet-026e71b8da384d804"
+  EC2SubnetVR:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::Subnet"
+    DeletionPolicy: "Retain"
+    Properties:
+      MapPublicIpOnLaunch: false
+      EnableDns64: false
+      VpcId: "vpc-009590ce365f16dbd"
+      AvailabilityZoneId: "eun1-az1"
+      PrivateDnsNameOptionsOnLaunch:
+        EnableResourceNameDnsARecord: false
+        HostnameType: "ip-name"
+        EnableResourceNameDnsAAAARecord: false
+      AvailabilityZone: "eu-north-1a"
+      CidrBlock: "192.168.1.64/27"
+      Ipv6Native: false
+      Tags:
+      - Value: "cloud-privateAPP-A"
+        Key: "Name"
+  EC2SubnetNetworkAclAssociationQW:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::SubnetNetworkAclAssociation"
+    DeletionPolicy: "Retain"
+    Properties:
+      NetworkAclId: "acl-04cfc01ff08421835"
+      SubnetId: "subnet-0b614301ec1332207"
+  EC2Instance:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::Instance"
+    DeletionPolicy: "Retain"
+    Properties:
+      Tenancy: "default"
+      PrivateIpAddress: "192.168.1.108"
+      MetadataOptions:
+        HttpPutResponseHopLimit: 2
+        HttpProtocolIpv6: "disabled"
+        HttpTokens: "required"
+        InstanceMetadataTags: "disabled"
+        HttpEndpoint: "enabled"
+      UserData: "I2Nsb3VkLWNvbmZpZwpwYWNrYWdlX3VwZGF0ZTogdHJ1ZQpwYWNrYWdlX3VwZ3JhZGU6IHRydWUKcnVuY21kOgotIHl1bSBpbnN0YWxsIC15IGFtYXpvbi1lZnMtdXRpbHMKLSBhcHQtZ2V0IC15IGluc3RhbGwgYW1hem9uLWVmcy11dGlscwotIHl1bSBpbnN0YWxsIC15IG5mcy11dGlscwotIGFwdC1nZXQgLXkgaW5zdGFsbCBuZnMtY29tbW9uCi0gZmlsZV9zeXN0ZW1faWRfMT1mcy0wNDBiYTM3MTRhMTBmYjFkZAotIGVmc19tb3VudF9wb2ludF8xPS9tbnQvZWZzL2ZzMQotIG1rZGlyIC1wICIke2Vmc19tb3VudF9wb2ludF8xfSIKLSB0ZXN0IC1mICIvc2Jpbi9tb3VudC5lZnMiICYmIHByaW50ZiAiXG4ke2ZpbGVfc3lzdGVtX2lkXzF9Oi8gJHtlZnNfbW91bnRfcG9pbnRfMX0gZWZzIHRscyxfbmV0ZGV2XG4iID4+IC9ldGMvZnN0YWIgfHwgcHJpbnRmICJcbiR7ZmlsZV9zeXN0ZW1faWRfMX0uZWZzLmV1LW5vcnRoLTEuYW1hem9uYXdzLmNvbTovICR7ZWZzX21vdW50X3BvaW50XzF9IG5mczQgbmZzdmVycz00LjEscnNpemU9MTA0ODU3Nix3c2l6ZT0xMDQ4NTc2LGhhcmQsdGltZW89NjAwLHJldHJhbnM9Mixub3Jlc3Zwb3J0LF9uZXRkZXYgMCAwXG4iID4+IC9ldGMvZnN0YWIKLSB0ZXN0IC1mICIvc2Jpbi9tb3VudC5lZnMiICYmIGdyZXAgLW96UCAnY2xpZW50LWluZm9dXG5zb3VyY2UnICcvZXRjL2FtYXpvbi9lZnMvZWZzLXV0aWxzLmNvbmYnOyBpZiBbWyAkPyA9PSAxIF1dOyB0aGVuIHByaW50ZiAiXG5bY2xpZW50LWluZm9dXG5zb3VyY2U9bGl3XG4iID4+IC9ldGMvYW1hem9uL2Vmcy9lZnMtdXRpbHMuY29uZjsgZmk7Ci0gcmV0cnlDbnQ9MTU7IHdhaXRUaW1lPTMwOyB3aGlsZSB0cnVlOyBkbyBtb3VudCAtYSAtdCBlZnMsbmZzNCBkZWZhdWx0czsgaWYgWyAkPyA9IDAgXSB8fCBbICRyZXRyeUNudCAtbHQgMSBdOyB0aGVuIGVjaG8gRmlsZSBzeXN0ZW0gbW91bnRlZCBzdWNjZXNzZnVsbHk7IGJyZWFrOyBmaTsgZWNobyBGaWxlIHN5c3RlbSBub3QgYXZhaWxhYmxlLCByZXRyeWluZyB0byBtb3VudC47ICgocmV0cnlDbnQtLSkpOyBzbGVlcCAkd2FpdFRpbWU7IGRvbmU7Cg=="
+      InstanceInitiatedShutdownBehavior: "stop"
+      BlockDeviceMappings:
+      - Ebs:
+          SnapshotId: "snap-0ca7408b4331da225"
+          VolumeType: "gp3"
+          Iops: 3000
+          VolumeSize: 8
+          Encrypted: false
+          DeleteOnTermination: true
+        DeviceName: "/dev/sda1"
+      PrivateDnsNameOptions:
+        EnableResourceNameDnsARecord: false
+        HostnameType: "ip-name"
+        EnableResourceNameDnsAAAARecord: false
+      SecurityGroupIds:
+      - "sg-0a65515e3279b61fe"
+      - "sg-0e8826539a6dd207f"
+      - "sg-04317d68c757e736a"
+      - "sg-071d7264877133d3a"
+      EbsOptimized: true
+      DisableApiTermination: false
+      SourceDestCheck: true
+      PlacementGroupName: ""
+      NetworkInterfaces:
+      - Ipv6Addresses: []
+        SecondaryPrivateIpAddressCount: 0
+        NetworkInterfaceId: "eni-086a4bc1ccefbbd9e"
+        DeviceIndex: "0"
+      ImageId: "ami-0aba19e56f3eaec05"
+      InstanceType: "t3.micro"
+      Monitoring: false
+      Tags:
+      - Value: "cloud-ec2B"
+        Key: "Name"
+      CreditSpecification:
+        CPUCredits: "unlimited"
+  LambdaFunctionTask2s3toprivateec2:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Lambda::Function"
+    DeletionPolicy: "Retain"
+    Properties:
+      MemorySize: 128
+      Description: ""
+      TracingConfig:
+        Mode: "PassThrough"
+      Timeout: 3
+      RuntimeManagementConfig:
+        UpdateRuntimeOn: "Auto"
+      Handler: "lambda_function.lambda_handler"
+      Code:
+        SourceKMSKeyArn:
+          Ref: "LambdaFunctionTask2s3toprivateec2CodeSourceKMSKeyArnFAzJH"
+        S3ObjectVersion:
+          Ref: "LambdaFunctionTask2s3toprivateec2CodeS3ObjectVersionXnCA9"
+        S3Bucket:
+          Ref: "LambdaFunctionTask2s3toprivateec2CodeS3BucketDaDeH"
+        ZipFile:
+          Ref: "LambdaFunctionTask2s3toprivateec2CodeZipFilePs8uJ"
+        S3Key:
+          Ref: "LambdaFunctionTask2s3toprivateec2CodeS3KeyNQLpC"
+        S3ObjectStorageMode:
+          Ref: "LambdaFunctionTask2s3toprivateec2CodeS3ObjectStorageModesvlfl"
+        ImageUri:
+          Ref: "LambdaFunctionTask2s3toprivateec2CodeImageUrivrm1o"
+      Role: "arn:aws:iam::137687463360:role/PowerUser-lambda-1"
+      FileSystemConfigs: []
+      FunctionName: "task2-s3-to-private-ec2"
+      Runtime: "python3.14"
+      PackageType: "Zip"
+      LoggingConfig:
+        LogFormat: "Text"
+        LogGroup: "/aws/lambda/task2-s3-to-private-ec2"
+      RecursiveLoop: "Terminate"
+      Environment:
+        Variables:
+          S3_BUCKET: "task2-storefromlambda"
+          EC2_USER: "ubuntu"
+          SSH_SECRET_NAME: "task2/private-ec2-keys"
+          EC2_PRIVATE_1: "129.50.73.132"
+          REMOTE_DIR: "/home/ubuntu/uploads/"
+          EC2_PRIVATE_2: "129.50.148.150"
+      EphemeralStorage:
+        Size: 512
+      Layers:
+      - "arn:aws:lambda:eu-north-1:137687463360:layer:paramiko-layer1:1"
+      Architectures:
+      - "x86_64"
+  ElasticLoadBalancingV2ListenerListenerappmyLBa647f5a1a2d74a58428e011022934e84:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::ElasticLoadBalancingV2::Listener"
+    DeletionPolicy: "Retain"
+    Properties:
+      ListenerAttributes:
+      - Value: "true"
+        Key: "routing.http.response.server.enabled"
+      - Value: ""
+        Key: "routing.http.response.access_control_allow_headers.header_value"
+      - Value: ""
+        Key: "routing.http.response.x_frame_options.header_value"
+      - Value: ""
+        Key: "routing.http.response.access_control_allow_methods.header_value"
+      - Value: ""
+        Key: "routing.http.response.access_control_allow_origin.header_value"
+      - Value: ""
+        Key: "routing.http.response.access_control_allow_credentials.header_value"
+      - Value: ""
+        Key: "routing.http.response.x_content_type_options.header_value"
+      - Value: ""
+        Key: "routing.http.response.content_security_policy.header_value"
+      - Value: ""
+        Key: "routing.http.response.access_control_expose_headers.header_value"
+      - Value: ""
+        Key: "routing.http.response.strict_transport_security.header_value"
+      - Value: ""
+        Key: "routing.http.response.access_control_max_age.header_value"
+      Protocol: "HTTP"
+      LoadBalancerArn: "arn:aws:elasticloadbalancing:eu-north-1:137687463360:loadbalancer/app/myLB/a647f5a1a2d74a58"
+      DefaultActions:
+      - Order: 1
+        TargetGroupArn: "arn:aws:elasticloadbalancing:eu-north-1:137687463360:targetgroup/mytarget/331864cad51057be"
+        Type: "forward"
+        ForwardConfig:
+          TargetGroupStickinessConfig:
+            Enabled: false
+            DurationSeconds: 3600
+          TargetGroups:
+          - TargetGroupArn: "arn:aws:elasticloadbalancing:eu-north-1:137687463360:targetgroup/mytarget/331864cad51057be"
+            Weight: 1
+      Port: 80
+  EC2Route:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::Route"
+    DeletionPolicy: "Retain"
+    Properties:
+      GatewayId: "igw-090a0eaceff2bf41b"
+      RouteTableId: "rtb-0f0e2b2429dc81b45"
+      DestinationCidrBlock: "0.0.0.0/0"
+  RDSDBInstance:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::RDS::DBInstance"
+    DeletionPolicy: "Retain"
+    Properties:
+      DatabaseInsightsMode: "standard"
+      StorageEncrypted: false
+      AssociatedRoles: []
+      Port: "5432"
+      DBClusterIdentifier: "database-1"
+      AdditionalStorageVolumes: []
+      ProcessorFeatures: []
+      StorageThroughput: 0
+      PreferredBackupWindow: "04:12-04:42"
+      MonitoringInterval: 0
+      DBParameterGroupName: "default.aurora-postgresql17"
+      DedicatedLogVolume: false
+      CopyTagsToSnapshot: false
+      MultiAZ: false
+      Engine: "aurora-postgresql"
+      Tags: []
+      EngineLifecycleSupport: "open-source-rds-extended-support"
+      LicenseModel: "postgresql-license"
+      EngineVersion: "17.9"
+      StorageType: "aurora"
+      DBInstanceClass: "db.serverless"
+      AvailabilityZone: "eu-north-1b"
+      OptionGroupName: "default:aurora-postgresql-17"
+      PreferredMaintenanceWindow: "fri:04:50-fri:05:20"
+      EnablePerformanceInsights: false
+      AutoMinorVersionUpgrade: true
+      DeletionProtection: false
+      DBInstanceIdentifier: "database-1-instance-1"
+      AllocatedStorage: "1"
+      BackupTarget: "region"
+      CACertificateIdentifier: "rds-ca-rsa2048-g1"
+      ManageMasterUserPassword: false
+      MasterUserSecret: {}
+      VPCSecurityGroups: []
+      DBSecurityGroups: []
+      MasterUsername: "postgres"
+      EnableIAMDatabaseAuthentication: true
+      PromotionTier: 1
+      PubliclyAccessible: false
+      BackupRetentionPeriod: 1
+      EnableCloudwatchLogsExports: []
+  EC2NetworkInterfaceLD:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::NetworkInterface"
+    DeletionPolicy: "Retain"
+    Properties:
+      SourceDestCheck: true
+      Description: ""
+      PrivateIpAddresses:
+      - PrivateIpAddress: "192.168.1.108"
+        Primary: true
+      Ipv6PrefixCount: 0
+      Ipv4Prefixes: []
+      Ipv4PrefixCount: 0
+      EnablePrimaryIpv6: false
+      GroupSet:
+      - "sg-0a65515e3279b61fe"
+      - "sg-0e8826539a6dd207f"
+      - "sg-04317d68c757e736a"
+      - "sg-071d7264877133d3a"
+      Ipv6Prefixes: []
+      SubnetId: "subnet-0b614301ec1332207"
+      Tags: []
+  KMSKey:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::KMS::Key"
+    DeletionPolicy: "Retain"
+    Properties:
+      Origin: "AWS_KMS"
+      MultiRegion: false
+      Description: "Default key that protects my EFS filesystems when no other key\
+        \ is defined"
+      KeyPolicy:
+        Version: "2012-10-17"
+        Statement:
+        - Condition:
+            StringEquals:
+              kms:CallerAccount: "137687463360"
+              kms:ViaService: "elasticfilesystem.eu-north-1.amazonaws.com"
+          Resource: "*"
+          Action:
+          - "kms:Encrypt"
+          - "kms:Decrypt"
+          - "kms:ReEncrypt*"
+          - "kms:GenerateDataKey*"
+          - "kms:CreateGrant"
+          - "kms:DescribeKey"
+          Effect: "Allow"
+          Principal:
+            AWS: "*"
+          Sid: "Allow access to EFS for all principals in the account that are authorized\
+            \ to use EFS"
+        - Resource: "*"
+          Action:
+          - "kms:Describe*"
+          - "kms:Get*"
+          - "kms:List*"
+          - "kms:RevokeGrant"
+          Effect: "Allow"
+          Principal:
+            AWS: "arn:aws:iam::137687463360:root"
+          Sid: "Allow direct access to key metadata to the account"
+        Id: "auto-elasticfilesystem-1"
+      KeySpec: "SYMMETRIC_DEFAULT"
+      Enabled: true
+      EnableKeyRotation: true
+      KeyUsage: "ENCRYPT_DECRYPT"
+      Tags: []
+  AutoScalingAutoScalingGroupScalGroub:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::AutoScaling::AutoScalingGroup"
+    DeletionPolicy: "Retain"
+    Properties:
+      LoadBalancerNames: []
+      ServiceLinkedRoleARN: "arn:aws:iam::137687463360:role/aws-service-role/autoscaling.amazonaws.com/AWSServiceRoleForAutoScaling"
+      SuspendedProcesses: []
+      TargetGroupARNs:
+      - "arn:aws:elasticloadbalancing:eu-north-1:137687463360:targetgroup/mytarget/331864cad51057be"
+      AvailabilityZoneIds:
+      - "eun1-az2"
+      - "eun1-az1"
+      Cooldown: "300"
+      AvailabilityZones:
+      - "eu-north-1b"
+      - "eu-north-1a"
+      AvailabilityZoneDistribution:
+        CapacityDistributionStrategy: "balanced-best-effort"
+      DesiredCapacity: "2"
+      HealthCheckGracePeriod: 300
+      MetricsCollection: []
+      InstanceLifecyclePolicy:
+        RetentionTriggers:
+          TerminateHookAbandon: "terminate"
+      DeletionProtection: "none"
+      MaxSize: "4"
+      NewInstancesProtectedFromScaleIn: false
+      MinSize: "2"
+      TerminationPolicies:
+      - "Default"
+      LaunchTemplate:
+        Version: "$Latest"
+        LaunchTemplateName: "My-ec2Template"
+        LaunchTemplateId: "lt-080ecddb93a391721"
+      AutoScalingGroupName: "ScalGroub"
+      TrafficSources:
+      - Type: "elbv2"
+        Identifier: "arn:aws:elasticloadbalancing:eu-north-1:137687463360:targetgroup/mytarget/331864cad51057be"
+      VPCZoneIdentifier:
+      - "subnet-0b614301ec1332207"
+      - "subnet-026e71b8da384d804"
+      CapacityReservationSpecification:
+        CapacityReservationPreference: "default"
+      Tags: []
+      HealthCheckType: "ELB"
+  EC2SecurityGroupL4:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::SecurityGroup"
+    DeletionPolicy: "Retain"
+    Properties:
+      GroupDescription: "Security group for  EC2 "
+      GroupName: "cloud-SG-ec2"
+      VpcId: "vpc-009590ce365f16dbd"
+      SecurityGroupIngress:
+      - IpProtocol: "tcp"
+        FromPort: 80
+        SourceSecurityGroupId: "sg-0a65515e3279b61fe"
+        ToPort: 80
+        SourceSecurityGroupOwnerId: "137687463360"
+      SecurityGroupEgress:
+      - CidrIp: "0.0.0.0/0"
+        IpProtocol: "-1"
+  EC2NetworkInterface:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::NetworkInterface"
+    DeletionPolicy: "Retain"
+    Properties:
+      SourceDestCheck: true
+      Description: ""
+      PrivateIpAddresses:
+      - PrivateIpAddress: "192.168.1.79"
+        Primary: true
+      Ipv6PrefixCount: 0
+      Ipv4Prefixes: []
+      Ipv4PrefixCount: 0
+      EnablePrimaryIpv6: false
+      GroupSet:
+      - "sg-0a65515e3279b61fe"
+      - "sg-0e8826539a6dd207f"
+      - "sg-04317d68c757e736a"
+      - "sg-071d7264877133d3a"
+      Ipv6Prefixes: []
+      SubnetId: "subnet-026e71b8da384d804"
+      Tags: []
+  EC2KeyPairEc2B:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::KeyPair"
+    DeletionPolicy: "Retain"
+    Properties:
+      KeyName: "ec2B"
+      KeyType: "rsa"
+      PublicKeyMaterial: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDLWBoDQ3mk4JRiJkRW15W/KcIOaltXHEVoBK8uSns4lIIhixuQ7ssa0Pzd+LKbFiht+Y+WerlafkWi38iF55EJSDlkZLL37lCEeFzVlIiH+miUQ6sGxGTC8cMsNv6WWnzGDoNY8Q3OAmi8K3Juw7l0NeoOb4sDEmMQn/cap0+UXn5f7I4l1vm0ILxo7lfDdhnAUkSNFcgHvbVqqdZZqiNDOKiMQVvAilIXxUhdivtnkxc8RsjDU6QPmzC+IezcNcaiP5tWUMkVo6OB07Zc1tezbiQJZPy4vzlv6kRtpP3M+Stnizk3xdPIolIvtI5Y3MgblQKGE/pX5OGrF6fS8xW3\
+        \ ec2B\n"
+      Tags: []
+  EC2KeyPairEc2A:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::KeyPair"
+    DeletionPolicy: "Retain"
+    Properties:
+      KeyName: "ec2A"
+      KeyType: "rsa"
+      PublicKeyMaterial: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC0L0SH7seyIGu1Qh8kawXxEiaE+pTvOTFt24qi7xOwYxCOOP1L2LsKiEQYoGcaFhByHkeuxTzbK4+j3d4G96ALkwbCbBq7DnIGTYUpny3l4hUGyjoDzMsbsCZRWVO+PSpfmPZQHGK2i9eqk+9hMu5tNBhYGx4IyWtP5kR6deNP/gMmvJBAacUnzCL7joc5T8NuOdjmjHjrVi7rJodRiyqyAFEAjMjmPyK8jPCKdObx9hE6r3AE2CuZ62zVFNdYtVxLwhNzhLPPa35+HzRUKWte0qo4mWp3DoJqF1p9+V0+M9ES/7r2+de8PqXPQwfKhZBmGlQFlNTKSX70OA7gCPNB\
+        \ ec2A\n"
+      Tags: []
+  EC2InternetGateway:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::InternetGateway"
+    DeletionPolicy: "Retain"
+    Properties:
+      Tags:
+      - Value: "cloud-IGW"
+        Key: "Name"
+  EC2NetworkAcl:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::NetworkAcl"
+    DeletionPolicy: "Retain"
+    Properties:
+      VpcId: "vpc-009590ce365f16dbd"
+      Tags: []
+  EFSFileSystem:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EFS::FileSystem"
+    DeletionPolicy: "Retain"
+    Properties:
+      KmsKeyId: "arn:aws:kms:eu-north-1:137687463360:key/3b120b5a-d38c-480a-98e2-e9819e552b2e"
+      PerformanceMode: "generalPurpose"
+      Encrypted: true
+      FileSystemTags:
+      - Value: "cloud-efs"
+        Key: "Name"
+      FileSystemProtection:
+        ReplicationOverwriteProtection: "ENABLED"
+      LifecyclePolicies:
+      - TransitionToIA: "AFTER_30_DAYS"
+      - TransitionToArchive: "AFTER_90_DAYS"
+      ThroughputMode: "elastic"
+      BackupPolicy:
+        Status: "ENABLED"
+  EC2VPCEndpoint:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::VPCEndpoint"
+    DeletionPolicy: "Retain"
+    Properties:
+      PrivateDnsEnabled: false
+      IpAddressType: "ipv4"
+      ServiceRegion: "eu-north-1"
+      DnsOptions:
+        PrivateDnsOnlyForInboundResolverEndpoint: "NotSpecified"
+        PrivateDnsSpecifiedDomains:
+        - "*"
+        DnsRecordIpType: "service-defined"
+        PrivateDnsPreference: "VERIFIED_DOMAINS_ONLY"
+      ResourceConfigurationArn: ""
+      SecurityGroupIds: []
+      SubnetIds: []
+      ServiceNetworkArn: ""
+      VpcId: "vpc-009590ce365f16dbd"
+      RouteTableIds:
+      - Ref: "EC2RouteTable"
+      ServiceName: "com.amazonaws.eu-north-1.s3"
+      PolicyDocument:
+        Version: "2008-10-17"
+        Statement:
+        - Resource: "*"
+          Action: "*"
+          Effect: "Allow"
+          Principal: "*"
+      VpcEndpointType: "Gateway"
+      Tags:
+      - Value: "myendpoint-s3Withsubnets"
+        Key: "Name"
+  EC2SubnetYy:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::Subnet"
+    DeletionPolicy: "Retain"
+    Properties:
+      MapPublicIpOnLaunch: false
+      EnableDns64: false
+      VpcId: "vpc-009590ce365f16dbd"
+      AvailabilityZoneId: "eun1-az1"
+      PrivateDnsNameOptionsOnLaunch:
+        EnableResourceNameDnsARecord: false
+        HostnameType: "ip-name"
+        EnableResourceNameDnsAAAARecord: false
+      AvailabilityZone: "eu-north-1a"
+      CidrBlock: "192.168.1.128/27"
+      Ipv6Native: false
+      Tags:
+      - Value: "cloud-privateData-A"
+        Key: "Name"
+  RDSDBCluster:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::RDS::DBCluster"
+    DeletionPolicy: "Retain"
+    Properties:
+      DatabaseInsightsMode: "standard"
+      StorageEncrypted: false
+      AssociatedRoles: []
+      EnableHttpEndpoint: false
+      EngineMode: "provisioned"
+      Port: 5432
+      DBClusterIdentifier: "database-1"
+      PreferredBackupWindow: "04:12-04:42"
+      VpcSecurityGroupIds: []
+      CopyTagsToSnapshot: false
+      Engine: "aurora-postgresql"
+      Tags: []
+      EngineLifecycleSupport: "open-source-rds-extended-support"
+      EngineVersion: "17.9"
+      StorageType: "aurora"
+      AvailabilityZones:
+      - "eu-north-1c"
+      - "eu-north-1a"
+      - "eu-north-1b"
+      ServerlessV2ScalingConfiguration:
+        MinCapacity: 0
+        SecondsUntilAutoPause: 300
+        MaxCapacity: 4
+      EnableLocalWriteForwarding: false
+      PreferredMaintenanceWindow: "tue:02:24-tue:02:54"
+      AutoMinorVersionUpgrade: true
+      DeletionProtection: false
+      AllocatedStorage: 1
+      ManageMasterUserPassword: false
+      MasterUserSecret: {}
+      MasterUsername: "postgres"
+      EnableIAMDatabaseAuthentication: true
+      DBClusterParameterGroupName: "default.aurora-postgresql17"
+      PerformanceInsightsEnabled: false
+      BackupRetentionPeriod: 1
+      EnableCloudwatchLogsExports: []
+  EC2SecurityGroupWj:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::SecurityGroup"
+    DeletionPolicy: "Retain"
+    Properties:
+      GroupDescription: "For lambda"
+      GroupName: "SG-LAMBDA"
+      VpcId: "vpc-009590ce365f16dbd"
+      SecurityGroupEgress:
+      - IpProtocol: "tcp"
+        DestinationSecurityGroupId: "sg-04317d68c757e736a"
+        FromPort: 2049
+        ToPort: 2049
+  AutoScalingAutoScalingGroupEc2Scaling:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::AutoScaling::AutoScalingGroup"
+    DeletionPolicy: "Retain"
+    Properties:
+      LoadBalancerNames: []
+      ServiceLinkedRoleARN: "arn:aws:iam::137687463360:role/aws-service-role/autoscaling.amazonaws.com/AWSServiceRoleForAutoScaling"
+      SuspendedProcesses: []
+      TargetGroupARNs: []
+      AvailabilityZoneIds:
+      - "eun1-az2"
+      - "eun1-az1"
+      Cooldown: "300"
+      AvailabilityZones:
+      - "eu-north-1b"
+      - "eu-north-1a"
+      AvailabilityZoneDistribution:
+        CapacityDistributionStrategy: "balanced-best-effort"
+      DesiredCapacity: "2"
+      HealthCheckGracePeriod: 300
+      MetricsCollection: []
+      InstanceLifecyclePolicy:
+        RetentionTriggers:
+          TerminateHookAbandon: "terminate"
+      DeletionProtection: "none"
+      MaxSize: "4"
+      NewInstancesProtectedFromScaleIn: false
+      MinSize: "2"
+      TerminationPolicies:
+      - "Default"
+      LaunchTemplate:
+        Version: "$Latest"
+        LaunchTemplateName: "My-ec2Template"
+        LaunchTemplateId: "lt-080ecddb93a391721"
+      AutoScalingGroupName: "ec2Scaling"
+      VPCZoneIdentifier:
+      - "subnet-0b614301ec1332207"
+      - "subnet-026e71b8da384d804"
+      CapacityReservationSpecification:
+        CapacityReservationPreference: "default"
+      Tags: []
+      HealthCheckType: "EBS"
+  IAMRoleCloudec2role:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::Role"
+    DeletionPolicy: "Retain"
+    Properties:
+      Path: "/"
+      ManagedPolicyArns:
+      - "arn:aws:iam::aws:policy/AmazonS3FilesReadOnlyAccess"
+      MaxSessionDuration: 3600
+      RoleName: "cloud-ec2role"
+      Description: "Allows EC2 instances to call AWS services on your behalf."
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Action: "sts:AssumeRole"
+          Effect: "Allow"
+          Principal:
+            Service: "ec2.amazonaws.com"
+  EC2SubnetNetworkAclAssociationIo:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::SubnetNetworkAclAssociation"
+    DeletionPolicy: "Retain"
+    Properties:
+      NetworkAclId: "acl-04cfc01ff08421835"
+      SubnetId: "subnet-075f958b3003e3dda"
+  EC2SubnetTr:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::Subnet"
+    DeletionPolicy: "Retain"
+    Properties:
+      MapPublicIpOnLaunch: false
+      EnableDns64: false
+      VpcId: "vpc-009590ce365f16dbd"
+      AvailabilityZoneId: "eun1-az1"
+      PrivateDnsNameOptionsOnLaunch:
+        EnableResourceNameDnsARecord: false
+        HostnameType: "ip-name"
+        EnableResourceNameDnsAAAARecord: false
+      AvailabilityZone: "eu-north-1a"
+      CidrBlock: "192.168.1.0/27"
+      Ipv6Native: false
+      Tags:
+      - Value: "cloud-publicA"
+        Key: "Name"
+  EC2SubnetDa:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::Subnet"
+    DeletionPolicy: "Retain"
+    Properties:
+      MapPublicIpOnLaunch: false
+      EnableDns64: false
+      VpcId: "vpc-009590ce365f16dbd"
+      AvailabilityZoneId: "eun1-az2"
+      PrivateDnsNameOptionsOnLaunch:
+        EnableResourceNameDnsARecord: false
+        HostnameType: "ip-name"
+        EnableResourceNameDnsAAAARecord: false
+      AvailabilityZone: "eu-north-1b"
+      CidrBlock: "192.168.1.32/27"
+      Ipv6Native: false
+      Tags:
+      - Value: "cloud-publicB"
+        Key: "Name"
+  S3BucketClouds3project:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::S3::Bucket"
+    DeletionPolicy: "Retain"
+    Properties:
+      AbacStatus: "Disabled"
+      PublicAccessBlockConfiguration:
+        RestrictPublicBuckets: true
+        IgnorePublicAcls: true
+        BlockPublicPolicy: true
+        BlockPublicAcls: true
+      BucketName: "cloud-s3project"
+      OwnershipControls:
+        Rules:
+        - ObjectOwnership: "BucketOwnerEnforced"
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+        - BucketKeyEnabled: true
+          BlockedEncryptionTypes:
+            EncryptionType:
+            - "SSE-C"
+          ServerSideEncryptionByDefault:
+            SSEAlgorithm: "AES256"
+  EC2Subnet:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::Subnet"
+    DeletionPolicy: "Retain"
+    Properties:
+      MapPublicIpOnLaunch: false
+      EnableDns64: false
+      VpcId: "vpc-009590ce365f16dbd"
+      AvailabilityZoneId: "eun1-az2"
+      PrivateDnsNameOptionsOnLaunch:
+        EnableResourceNameDnsARecord: false
+        HostnameType: "ip-name"
+        EnableResourceNameDnsAAAARecord: false
+      AvailabilityZone: "eu-north-1b"
+      CidrBlock: "192.168.1.160/27"
+      Ipv6Native: false
+      Tags:
+      - Value: "cloud-privateData-B"
+        Key: "Name"
+  EC2VolumeAttachmentGV:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::VolumeAttachment"
+    DeletionPolicy: "Retain"
+    Properties:
+      VolumeId: "vol-0ceb43cede97943eb"
+      InstanceId: "i-0b52a8250ffcb928b"
+      Device: "/dev/sda1"
+      EbsCardIndex: 0
+  EC2SecurityGroup:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::SecurityGroup"
+    DeletionPolicy: "Retain"
+    Properties:
+      GroupDescription: "for efs"
+      GroupName: "cloud-SG-EFS"
+      VpcId: "vpc-009590ce365f16dbd"
+      SecurityGroupIngress:
+      - IpProtocol: "tcp"
+        FromPort: 2049
+        SourceSecurityGroupId: "sg-0da0c617af0fa1fb4"
+        ToPort: 2049
+        SourceSecurityGroupOwnerId: "137687463360"
+      - IpProtocol: "tcp"
+        FromPort: 2049
+        SourceSecurityGroupId: "sg-071d7264877133d3a"
+        ToPort: 2049
+        SourceSecurityGroupOwnerId: "137687463360"
+      SecurityGroupEgress:
+      - CidrIp: "0.0.0.0/0"
+        IpProtocol: "-1"
+  EFSMountTarget:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EFS::MountTarget"
+    DeletionPolicy: "Retain"
+    Properties:
+      SecurityGroups:
+      - "sg-01d59de241ad87a6f"
+      - "sg-04317d68c757e736a"
+      - "sg-031aed01514d76c47"
+      FileSystemId: "fs-040ba3714a10fb1dd"
+      IpAddress: "192.168.1.72"
+      SubnetId: "subnet-026e71b8da384d804"
+  EC2SecurityGroupUw:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::SecurityGroup"
+    DeletionPolicy: "Retain"
+    Properties:
+      GroupDescription: "Security group for DB"
+      GroupName: "cloud-SG-DB"
+      VpcId: "vpc-009590ce365f16dbd"
+      SecurityGroupIngress:
+      - IpProtocol: "tcp"
+        FromPort: 3306
+        SourceSecurityGroupId: "sg-071d7264877133d3a"
+        ToPort: 3306
+        SourceSecurityGroupOwnerId: "137687463360"
+      SecurityGroupEgress:
+      - CidrIp: "0.0.0.0/0"
+        IpProtocol: "-1"
+  EC2LaunchTemplate:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::LaunchTemplate"
+    DeletionPolicy: "Retain"
+    Properties:
+      LaunchTemplateData:
+        SecurityGroups:
+          Ref: "EC2LaunchTemplateLaunchTemplateDataSecurityGroupsCdYEt"
+        NetworkPerformanceOptions:
+          BandwidthWeighting:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataNetworkPerformanceOptionsBandwidthWeighting7oZjj"
+        UserData:
+          Ref: "EC2LaunchTemplateLaunchTemplateDataUserDatanOoxF"
+        MaintenanceOptions:
+          AutoRecovery:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataMaintenanceOptionsAutoRecoverybDyHq"
+        IamInstanceProfile:
+          Arn:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataIamInstanceProfileArnQwicL"
+          Name:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataIamInstanceProfileNameL1hPo"
+        KernelId:
+          Ref: "EC2LaunchTemplateLaunchTemplateDataKernelIdeA70P"
+        EbsOptimized:
+          Ref: "EC2LaunchTemplateLaunchTemplateDataEbsOptimizedCUFON"
+        Placement:
+          Tenancy:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataPlacementTenancy5rmZ0"
+          GroupName:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataPlacementGroupNameB6N9w"
+          SpreadDomain:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataPlacementSpreadDomainFNUlg"
+          PartitionNumber:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataPlacementPartitionNumberMRVAM"
+          Affinity:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataPlacementAffinityhFLqr"
+          AvailabilityZone:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataPlacementAvailabilityZoneFkvo4"
+          HostResourceGroupArn:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataPlacementHostResourceGroupArnSgd1d"
+          HostId:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataPlacementHostIdBWfew"
+          GroupId:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataPlacementGroupIdsQ5Ni"
+        EnclaveOptions:
+          Enabled:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataEnclaveOptionsEnabledw7W2b"
+        ImageId:
+          Ref: "EC2LaunchTemplateLaunchTemplateDataImageIdXrKFk"
+        InstanceType:
+          Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceTypeszc0W"
+        Monitoring:
+          Enabled:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataMonitoringEnabledDIhYz"
+        HibernationOptions:
+          Configured:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataHibernationOptionsConfiguredUAzwR"
+        MetadataOptions:
+          HttpPutResponseHopLimit:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataMetadataOptionsHttpPutResponseHopLimitPf2Km"
+          HttpTokens:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataMetadataOptionsHttpTokensqW6We"
+          HttpProtocolIpv6:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataMetadataOptionsHttpProtocolIpv6pK084"
+          InstanceMetadataTags:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataMetadataOptionsInstanceMetadataTagsxpURX"
+          HttpEndpoint:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataMetadataOptionsHttpEndpointSZAWe"
+        DisableApiStop:
+          Ref: "EC2LaunchTemplateLaunchTemplateDataDisableApiStopmfeI4"
+        InstanceInitiatedShutdownBehavior:
+          Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceInitiatedShutdownBehavior1a7ZL"
+        CpuOptions:
+          ThreadsPerCore:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataCpuOptionsThreadsPerCoretMAkY"
+          AmdSevSnp:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataCpuOptionsAmdSevSnpTJnyg"
+          CoreCount:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataCpuOptionsCoreCountPEGZE"
+          NestedVirtualization:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataCpuOptionsNestedVirtualizationOBs43"
+        PrivateDnsNameOptions:
+          EnableResourceNameDnsARecord:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataPrivateDnsNameOptionsEnableResourceNameDnsARecordgNJZ9"
+          HostnameType:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataPrivateDnsNameOptionsHostnameTypekRjZ0"
+          EnableResourceNameDnsAAAARecord:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataPrivateDnsNameOptionsEnableResourceNameDnsAAAARecordOpd3o"
+        SecurityGroupIds:
+          Ref: "EC2LaunchTemplateLaunchTemplateDataSecurityGroupIds8UNO6"
+        KeyName:
+          Ref: "EC2LaunchTemplateLaunchTemplateDataKeyNamefI4DX"
+        DisableApiTermination:
+          Ref: "EC2LaunchTemplateLaunchTemplateDataDisableApiTerminationBQawS"
+        InstanceMarketOptions:
+          SpotOptions:
+            InstanceInterruptionBehavior:
+              Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceMarketOptionsSpotOptionsInstanceInterruptionBehaviorXc0LU"
+            MaxPrice:
+              Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceMarketOptionsSpotOptionsMaxPricegQ1hF"
+            SpotInstanceType:
+              Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceMarketOptionsSpotOptionsSpotInstanceTypeMGfhD"
+            BlockDurationMinutes:
+              Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceMarketOptionsSpotOptionsBlockDurationMinutesyRsRK"
+            ValidUntil:
+              Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceMarketOptionsSpotOptionsValidUntiluLe6b"
+          MarketType:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceMarketOptionsMarketTypefla8r"
+        InstanceRequirements:
+          LocalStorageTypes:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsLocalStorageTypesDAP9b"
+          InstanceGenerations:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsInstanceGenerationsXeLvE"
+          NetworkInterfaceCount:
+            Max:
+              Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsNetworkInterfaceCountMaxM8SnT"
+            Min:
+              Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsNetworkInterfaceCountMinLzDyf"
+          MemoryGiBPerVCpu:
+            Max:
+              Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsMemoryGiBPerVCpuMax2T7sI"
+            Min:
+              Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsMemoryGiBPerVCpuMinxB8UV"
+          AcceleratorTypes:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsAcceleratorTypess3Sph"
+          VCpuCount:
+            Max:
+              Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsVCpuCountMaxnp3PX"
+            Min:
+              Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsVCpuCountMin9LUZW"
+          ExcludedInstanceTypes:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsExcludedInstanceTypes3FTYk"
+          AcceleratorManufacturers:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsAcceleratorManufacturersaj2Yd"
+          AllowedInstanceTypes:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsAllowedInstanceTypeszF9ru"
+          LocalStorage:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsLocalStorage45Rhy"
+          CpuManufacturers:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsCpuManufacturersNfuTR"
+          NetworkBandwidthGbps:
+            Max:
+              Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsNetworkBandwidthGbpsMax4nsth"
+            Min:
+              Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsNetworkBandwidthGbpsMinx8ldF"
+          AcceleratorCount:
+            Max:
+              Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsAcceleratorCountMaxFVumb"
+            Min:
+              Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsAcceleratorCountMinwlZWu"
+          BareMetal:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsBareMetal8qqbb"
+          RequireHibernateSupport:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsRequireHibernateSupportGTGdZ"
+          MaxSpotPriceAsPercentageOfOptimalOnDemandPrice:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsMaxSpotPriceAsPercentageOfOptimalOnDemandPriceYs3hB"
+          BaselineEbsBandwidthMbps:
+            Max:
+              Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsBaselineEbsBandwidthMbpsMaxQWME0"
+            Min:
+              Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsBaselineEbsBandwidthMbpsMinCUEEO"
+          SpotMaxPricePercentageOverLowestPrice:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsSpotMaxPricePercentageOverLowestPricel6WSi"
+          AcceleratorNames:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsAcceleratorNamesFgGOe"
+          AcceleratorTotalMemoryMiB:
+            Max:
+              Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsAcceleratorTotalMemoryMiBMaxr13oB"
+            Min:
+              Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsAcceleratorTotalMemoryMiBMinVrf8L"
+          OnDemandMaxPricePercentageOverLowestPrice:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsOnDemandMaxPricePercentageOverLowestPricezMEz6"
+          BurstablePerformance:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsBurstablePerformancec8oTq"
+          MemoryMiB:
+            Max:
+              Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsMemoryMiBMax0q1v3"
+            Min:
+              Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsMemoryMiBMinVvi14"
+          TotalLocalStorageGB:
+            Max:
+              Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsTotalLocalStorageGBMaxERm8o"
+            Min:
+              Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsTotalLocalStorageGBMino2GMu"
+        CapacityReservationSpecification:
+          CapacityReservationTarget:
+            CapacityReservationResourceGroupArn:
+              Ref: "EC2LaunchTemplateLaunchTemplateDataCapacityReservationSpecificationCapacityReservationTargetCapacityReservationResourceGroupArnLB9qo"
+            CapacityReservationId:
+              Ref: "EC2LaunchTemplateLaunchTemplateDataCapacityReservationSpecificationCapacityReservationTargetCapacityReservationId7JxpP"
+          CapacityReservationPreference:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataCapacityReservationSpecificationCapacityReservationPreferencec2GEM"
+        RamDiskId:
+          Ref: "EC2LaunchTemplateLaunchTemplateDataRamDiskIdqHkPG"
+        CreditSpecification:
+          CpuCredits:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataCreditSpecificationCpuCreditstKNLt"
+      LaunchTemplateName: "My-ec2Template"
+  IAMRolePowerUserlambda1:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::Role"
+    DeletionPolicy: "Retain"
+    Properties:
+      Path: "/"
+      ManagedPolicyArns:
+      - "arn:aws:iam::aws:policy/PowerUserAccess"
+      MaxSessionDuration: 3600
+      RoleName: "PowerUser-lambda-1"
+      Description: "Power user role for lambda.amazonaws.com"
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Action: "sts:AssumeRole"
+          Effect: "Allow"
+          Principal:
+            Service: "lambda.amazonaws.com"
+  LambdaPermissionFunctiontask2s3toprivateec2:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Lambda::Permission"
+    DeletionPolicy: "Retain"
+    Properties:
+      FunctionName: "arn:aws:lambda:eu-north-1:137687463360:function:task2-s3-to-private-ec2"
+      Action: "lambda:InvokeFunction"
+      SourceArn: "arn:aws:s3:::task2-storefromlambda"
+      Principal: "s3.amazonaws.com"
+      SourceAccount: "137687463360"
+  LambdaFunctionLambdaLOGS:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Lambda::Function"
+    DeletionPolicy: "Retain"
+    Properties:
+      MemorySize: 128
+      Description: ""
+      TracingConfig:
+        Mode: "PassThrough"
+      VpcConfig:
+        SecurityGroupIds:
+        - "sg-0da0c617af0fa1fb4"
+        SubnetIds:
+        - "subnet-0b614301ec1332207"
+        - "subnet-026e71b8da384d804"
+        Ipv6AllowedForDualStack: false
+      Timeout: 3
+      RuntimeManagementConfig:
+        UpdateRuntimeOn: "Auto"
+      Handler: "lambda_function.lambda_handler"
+      Code:
+        SourceKMSKeyArn:
+          Ref: "LambdaFunctionLambdaLOGSCodeSourceKMSKeyArnHiNtX"
+        S3ObjectVersion:
+          Ref: "LambdaFunctionLambdaLOGSCodeS3ObjectVersionIPAIn"
+        S3Bucket:
+          Ref: "LambdaFunctionLambdaLOGSCodeS3BucketEGjcA"
+        ZipFile:
+          Ref: "LambdaFunctionLambdaLOGSCodeZipFileOcbxo"
+        S3Key:
+          Ref: "LambdaFunctionLambdaLOGSCodeS3KeyWscHC"
+        S3ObjectStorageMode:
+          Ref: "LambdaFunctionLambdaLOGSCodeS3ObjectStorageModeYTQWz"
+        ImageUri:
+          Ref: "LambdaFunctionLambdaLOGSCodeImageUriuqaKM"
+      Role: "arn:aws:iam::137687463360:role/PowerUser-lambda-1"
+      FileSystemConfigs:
+      - Arn: "arn:aws:elasticfilesystem:eu-north-1:137687463360:access-point/fsap-0c61adf23e5d8fdbf"
+        LocalMountPath: "/mnt/efs"
+      FunctionName: "lambdaLOGS"
+      Runtime: "python3.14"
+      PackageType: "Zip"
+      LoggingConfig:
+        LogFormat: "Text"
+        LogGroup: "/aws/lambda/lambdaLOGS"
+      RecursiveLoop: "Terminate"
+      EphemeralStorage:
+        Size: 512
+      Architectures:
+      - "x86_64"
+  EC2VolumeAttachment:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::VolumeAttachment"
+    DeletionPolicy: "Retain"
+    Properties:
+      VolumeId: "vol-03c45a6425f2d240b"
+      InstanceId: "i-07ce04a7c98c67616"
+      Device: "/dev/sda1"
+      EbsCardIndex: 0
+  EC2SubnetAD:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::Subnet"
+    DeletionPolicy: "Retain"
+    Properties:
+      MapPublicIpOnLaunch: false
+      EnableDns64: false
+      VpcId: "vpc-009590ce365f16dbd"
+      AvailabilityZoneId: "eun1-az2"
+      PrivateDnsNameOptionsOnLaunch:
+        EnableResourceNameDnsARecord: false
+        HostnameType: "ip-name"
+        EnableResourceNameDnsAAAARecord: false
+      AvailabilityZone: "eu-north-1b"
+      CidrBlock: "192.168.1.96/27"
+      Ipv6Native: false
+      Tags:
+      - Value: "cloud-privateAPP-B"
+        Key: "Name"
+  RDSDBSubnetGroupCloudgroupdata:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::RDS::DBSubnetGroup"
+    DeletionPolicy: "Retain"
+    Properties:
+      DBSubnetGroupDescription: "for group data subnets"
+      SubnetIds:
+      - "subnet-0f2c0dad527f386e1"
+      - "subnet-00b36ff7a957d81cf"
+      DBSubnetGroupName: "cloud-groupdata"
+  EFSAccessPoint:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EFS::AccessPoint"
+    DeletionPolicy: "Retain"
+    Properties:
+      FileSystemId: "fs-040ba3714a10fb1dd"
+      RootDirectory:
+        Path: "/lambda-logs"
+        CreationInfo:
+          OwnerGid: "750"
+          Permissions: "0755"
+          OwnerUid: "1001"
+      ClientToken: "console-2009cc3e-3d6d-4dc0-89cc-506204cc9138"
+      AccessPointTags:
+      - Value: "access2forlambda"
+        Key: "Name"
+      PosixUser:
+        Uid: "1001"
+        SecondaryGids:
+        - "750"
+        Gid: "750"
+  EC2Volume:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::Volume"
+    DeletionPolicy: "Retain"
+    Properties:
+      MultiAttachEnabled: false
+      SnapshotId: "snap-0ca7408b4331da225"
+      VolumeType: "gp3"
+      Encrypted: false
+      Size: 8
+      AutoEnableIO: true
+      AvailabilityZoneId: "eun1-az2"
+      AvailabilityZone: "eu-north-1b"
+      Throughput: 125
+      Iops: 3000
+      Tags: []
+  EC2KeyPairMytemplate:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::KeyPair"
+    DeletionPolicy: "Retain"
+    Properties:
+      KeyName: "mytemplate"
+      KeyType: "rsa"
+      PublicKeyMaterial: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC2A5vgJ2vkJfIr/WDlBUiVNPNmLqev/eX/b1CZ/BF0nVhalvMPw04zaV2j/EW/N1GzxjClYUL9ygFZtcVfdusIu9plSSbQFajqUphjhPkpojnoEjNpvtrJOzmy53hhTdDDQt01u/kTp9ZpUnh1JyW48i28P72teLhizixFziLE7sGFH0nhZFYwYgISedAfzKIFjFCbovR+6IR/CYv/xRvpaTsBDeCFv76RGTsh6y3NUCIly6WgtEufDrqHBWmKbqtKNtWftwRQBXlabcovsrHMQLcQ/5/SoW3gSjRse23NPFuolGLEKfz8zxBNYcVOkJofe4Y0aU/0d7rnOd/PMIyV\
+        \ mytemplate\n"
+      Tags: []
+  IAMInstanceProfileCloudec2role:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::InstanceProfile"
+    DeletionPolicy: "Retain"
+    Properties:
+      Path: "/"
+      Roles:
+      - "cloud-ec2role"
+      InstanceProfileName: "cloud-ec2role"
+  EC2SubnetNetworkAclAssociationP1:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::SubnetNetworkAclAssociation"
+    DeletionPolicy: "Retain"
+    Properties:
+      NetworkAclId: "acl-04cfc01ff08421835"
+      SubnetId: "subnet-0986408666ea9a9ab"
+  EC2RouteTableSS:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::RouteTable"
+    DeletionPolicy: "Retain"
+    Properties:
+      VpcId: "vpc-009590ce365f16dbd"
+      Tags:
+      - Value: "cloud-publicRT"
+        Key: "Name"
+  EC2VPC:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::VPC"
+    DeletionPolicy: "Retain"
+    Properties:
+      CidrBlock: "192.168.1.0/24"
+      EnableDnsSupport: true
+      InstanceTenancy: "default"
+      EnableDnsHostnames: false
+      Tags:
+      - Value: "cloud-vpc"
+        Key: "Name"
+  EC2RouteTable:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::RouteTable"
+    DeletionPolicy: "Retain"
+    Properties:
+      VpcId: "vpc-009590ce365f16dbd"
+      Tags:
+      - Value: "cloud-privateRT"
+        Key: "Name"
+  EC2VolumeJZ:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::Volume"
+    DeletionPolicy: "Retain"
+    Properties:
+      MultiAttachEnabled: false
+      SnapshotId: "snap-0ca7408b4331da225"
+      VolumeType: "gp3"
+      Encrypted: false
+      Size: 8
+      AutoEnableIO: true
+      AvailabilityZoneId: "eun1-az1"
+      AvailabilityZone: "eu-north-1a"
+      Throughput: 125
+      Iops: 3000
+      Tags: []
+  ElasticLoadBalancingV2TargetGroupTargetgroupmytarget331864cad51057be:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::ElasticLoadBalancingV2::TargetGroup"
+    DeletionPolicy: "Retain"
+    Properties:
+      IpAddressType: "ipv4"
+      HealthCheckIntervalSeconds: 30
+      Matcher:
+        HttpCode: "200"
+      HealthCheckPath: "/"
+      Port: 80
+      Targets:
+      - Port: 80
+        Id: "i-05ea18cd1853367b8"
+      - Port: 80
+        Id: "i-07ce04a7c98c67616"
+      - Port: 80
+        Id: "i-079d664221fc3ccc3"
+      - Port: 80
+        Id: "i-0b52a8250ffcb928b"
+      - Port: 80
+        Id: "i-05df01d5e3547a529"
+      HealthCheckEnabled: true
+      ProtocolVersion: "HTTP1"
+      UnhealthyThresholdCount: 2
+      HealthCheckTimeoutSeconds: 5
+      Name: "mytarget"
+      VpcId: "vpc-009590ce365f16dbd"
+      HealthyThresholdCount: 5
+      HealthCheckProtocol: "HTTP"
+      TargetGroupAttributes:
+      - Value: "lb_cookie"
+        Key: "stickiness.type"
+      - Value: "86400"
+        Key: "stickiness.app_cookie.duration_seconds"
+      - Value: "1"
+        Key: "target_group_health.dns_failover.minimum_healthy_targets.count"
+      - Value: "use_load_balancer_configuration"
+        Key: "load_balancing.cross_zone.enabled"
+      - Value: "86400"
+        Key: "stickiness.lb_cookie.duration_seconds"
+      - Value: "off"
+        Key: "target_group_health.dns_failover.minimum_healthy_targets.percentage"
+      - Value: "false"
+        Key: "stickiness.enabled"
+      - Value: "off"
+        Key: "target_group_health.unhealthy_state_routing.minimum_healthy_targets.percentage"
+      - Value: "0"
+        Key: "slow_start.duration_seconds"
+      - Value: "300"
+        Key: "deregistration_delay.timeout_seconds"
+      - Value: "1"
+        Key: "target_group_health.unhealthy_state_routing.minimum_healthy_targets.count"
+      - Value: "off"
+        Key: "load_balancing.algorithm.anomaly_mitigation"
+      - Value: ""
+        Key: "stickiness.app_cookie.cookie_name"
+      - Value: "round_robin"
+        Key: "load_balancing.algorithm.type"
+      TargetType: "instance"
+      HealthCheckPort: "traffic-port"
+      Protocol: "HTTP"
+      Tags: []
+  IAMRoleAWSServiceRoleForAutoScaling:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::Role"
+    DeletionPolicy: "Retain"
+    Properties:
+      Path: "/aws-service-role/autoscaling.amazonaws.com/"
+      ManagedPolicyArns:
+      - "arn:aws:iam::aws:policy/aws-service-role/AutoScalingServiceRolePolicy"
+      MaxSessionDuration: 3600
+      RoleName: "AWSServiceRoleForAutoScaling"
+      Description: "Default Service-Linked Role enables access to AWS Services and\
+        \ Resources used or managed by Auto Scaling"
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Action: "sts:AssumeRole"
+          Effect: "Allow"
+          Principal:
+            Service: "autoscaling.amazonaws.com"
